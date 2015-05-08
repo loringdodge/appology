@@ -1,0 +1,93 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <!--
+      Nav Bar (Top):
+    -->
+    <ion-nav-bar class="bar-stable bar-calm">
+      <!-- Back Nav Button -->
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <!-- Right Menu Button (Hamburger)-->
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+
+    <!--
+      Main Content View (Currently Disabled):
+      This is the default view for content routed by the right side menu.
+      Currently, views are routed through the tabs
+    -->
+    <!--     <ion-nav-view name="menuContent"></ion-nav-view> -->
+
+    <!--
+      Tabs:
+      Each tab's child <ion-nav-view> directive will have its own
+      navigation history that also transitions its views in and out.
+    -->
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+      <!-- Commissions Tab -->
+      <ion-tab title="Commissions" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
+        <ion-nav-view name="tab-dash"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Checklist Tab -->
+      <ion-tab title="Checklist" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">
+        <ion-nav-view name="tab-chats"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Proposals Tab -->
+      <ion-tab title="Proposals" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
+        <ion-nav-view name="tab-account"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Directory Tab -->
+      <ion-tab title="Directory" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
+        <ion-nav-view name="tab-account"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+  <!--
+    Right Side Menu (Hamburger):
+  -->
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar-stable bar-assertive">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <!-- Login Link -->
+        <ion-item nav-clear menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <!-- Home Link -->
+        <ion-item nav-clear menu-close href="#/app/home">
+          Home
+        </ion-item>
+        <!-- Request Link -->
+        <ion-item nav-clear menu-close href="#/app/request">
+          Commissions Savings
+        </ion-item>
+        <!-- Checklist Link -->
+        <ion-item nav-clear menu-close href="#/app/checklist">
+          Seller Checklist
+        </ion-item>
+        <!-- Proposals Link -->
+        <ion-item nav-clear menu-close href="#/app/proposals">
+          View Proposals
+        </ion-item>
+        <!-- Directory Link -->
+        <ion-item nav-clear menu-close href="#/app/agents">
+          Agent Directory
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
