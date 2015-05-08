@@ -35,11 +35,18 @@ angular.module('app', ['ionic', 'app.controllers'])
     /*
       PARENT STATE
     */
-    .state('app', {
-      url: "/app",
+    // .state('app', {
+    //   url: "/app",
+    //   abstract: true,
+    //   templateUrl: "templates/menu.html",
+    //   controller: 'AppCtrl'
+    // })
+
+    // setup an abstract state for the tabs directive
+    .state('tab', {
+      url: "/tab",
       abstract: true,
-      templateUrl: "templates/menu.html",
-      controller: 'AppCtrl'
+      templateUrl: "templates/tabs.html"
     })
 
     /*
@@ -139,12 +146,6 @@ angular.module('app', ['ionic', 'app.controllers'])
       }
     })
 
-      // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: "/tab",
-    abstract: true,
-    templateUrl: "templates/tabs.html"
-  })
 
   // Each tab has its own nav history stack:
 
@@ -190,7 +191,7 @@ angular.module('app', ['ionic', 'app.controllers'])
     /*
       FALLBACK STATE
     */
-    $urlRouterProvider.otherwise('/app/home');
+    $urlRouterProvider.otherwise('/tab/dash');
 
 
   // 2. Ionic Config
