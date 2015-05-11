@@ -48,20 +48,6 @@ angular.module('app', [
       controller: 'LoginController'
     })
 
-
-    /*
-      AUTH STATE
-      All processes related to logging in, logging out, and signing up
-    */
-    .state('tab.dash', {
-      url: '/dash',
-      views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html'
-        }
-      }
-    })
-
     /*
       HOME STATE
       Initial screen that is shown when the app is loaded
@@ -83,7 +69,7 @@ angular.module('app', [
       url: '/request',
       views: {
         'tab-request': {
-          templateUrl: 'templates/request-commissions.html'
+          templateUrl: 'templates/tab-commissions.html'
         }
       }
     })
@@ -106,7 +92,7 @@ angular.module('app', [
       url: '/checklist',
       views: {
         'tab-checklist': {
-          templateUrl: 'templates/checklist.html'
+          templateUrl: 'templates/tab-checklist.html'
         }
       }
     })
@@ -137,7 +123,7 @@ angular.module('app', [
       url: '/proposal',
       views: {
         'tab-proposal': {
-          templateUrl: 'templates/proposal-list.html'
+          templateUrl: 'templates/tab-proposal.html'
         }
       }
     })
@@ -159,7 +145,7 @@ angular.module('app', [
       url: '/directory',
       views: {
         'tab-directory': {
-          templateUrl: 'templates/agent-directory.html'
+          templateUrl: 'templates/tab-directory.html'
         }
       }
     })
