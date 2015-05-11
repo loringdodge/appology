@@ -20,12 +20,12 @@ angular.module('app.AgentFactory', [])
       HTTP FUNCTIONS
     */
 
-      // Login user
+      // Get the directly of agents
       var getDirectory = function() {
 
       }
 
-      // Logout user
+      // Get a single agent
       var getAgent = function() {
 
       }

@@ -12,14 +12,17 @@ angular.module('app.ChecklistFactory', [])
       FUNCTIONS
     */
 
+      // Add a checklist item
       var addItem = function() {
 
       }
 
+      // Remove a checklist item
       var removeItem = function() {
 
       }
 
+      // Toggle a checklist item as completed or not completed
       var toggleCheck = function() {
 
       }
