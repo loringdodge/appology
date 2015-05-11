@@ -33,23 +33,81 @@ angular.module('app', ['ionic', 'app.controllers'])
     $stateProvider
 
     /*
-      PARENT STATE
+      ABSTRACT STATE
+      All states share this common parent which includes both tab navigation and
+      right side menu navigation
     */
-    // .state('app', {
-    //   url: "/app",
-    //   abstract: true,
-    //   templateUrl: "templates/menu.html",
-    //   controller: 'AppCtrl'
-    // })
-
-    // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
     })
 
+
     /*
+      AUTH STATE
+      All processes related to logging in, logging out, and signing up
+    */
+    .state('tab.dash', {
+      url: '/dash',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/tab-dash.html'
+        }
+      }
+    })
+
+    /*
+      HOME STATE
+      The initial screen that is shown when the app is loaded
+    */
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html'
+        }
+      }
+    })
+
+    /*
+      REQUEST STATE
+    */
+    .state('tab.request', {
+      url: "/request",
+      views: {
+        'tab-request': {
+          templateUrl: "templates/request-commissions.html"
+        }
+      }
+    })
+
+    .state('tab.chats', {
+        url: '/chats',
+        views: {
+          'tab-chats': {
+            templateUrl: 'templates/tab-chats.html'
+          }
+        }
+      })
+      .state('tab.chat-detail', {
+        url: '/chats/:chatId',
+        views: {
+          'tab-chats': {
+            templateUrl: 'templates/chat-detail.html'
+          }
+        }
+      })
+
+    .state('tab.account', {
+      url: '/account',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-account.html'
+        }
+      }
+    })
+      /*
       HOME STATE
     */
     .state('app.home', {
@@ -146,52 +204,10 @@ angular.module('app', ['ionic', 'app.controllers'])
       }
     })
 
-
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  });
-
     /*
       FALLBACK STATE
     */
-    $urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('/tab/home');
 
 
   // 2. Ionic Config
