@@ -59,7 +59,7 @@ angular.module('app', ['ionic', 'app.controllers'])
 
     /*
       HOME STATE
-      The initial screen that is shown when the app is loaded
+      Initial screen that is shown when the app is loaded
     */
     .state('tab.home', {
       url: '/home',
@@ -72,6 +72,7 @@ angular.module('app', ['ionic', 'app.controllers'])
 
     /*
       REQUEST STATE
+      Users submit their personal information in order to get proposals
     */
     .state('tab.request', {
       url: "/request",
@@ -81,137 +82,105 @@ angular.module('app', ['ionic', 'app.controllers'])
         }
       }
     })
-
-    .state('tab.chats', {
-        url: '/chats',
+      // REQUEST VIEW
+      .state('tab.request-submit', {
+        url: "/request/submit",
         views: {
-          'tab-chats': {
-            templateUrl: 'templates/tab-chats.html'
-          }
-        }
-      })
-      .state('tab.chat-detail', {
-        url: '/chats/:chatId',
-        views: {
-          'tab-chats': {
-            templateUrl: 'templates/chat-detail.html'
+          'tab-request': {
+            templateUrl: "templates/request-submit.html"
           }
         }
       })
 
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html'
-        }
-      }
-    })
-      /*
-      HOME STATE
-    */
-    .state('app.home', {
-      url: "/home",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/home.html"
-        }
-      }
-    })
-
-    /*
-      AGENTS STATE
-    */
-    .state('app.agents', {
-      url: "/agents",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/agent-directory.html"
-        }
-      }
-    })
-
-    .state('app.agentsProfile', {
-      url: "/agents/:id",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/agent-profile.html"
-        }
-      }
-    })
 
     /*
       CHECKLIST STATE
+      Users check off from a list of things to be done in order to sell their home
     */
-    .state('app.checklist', {
+    .state('tab.checklist', {
       url: "/checklist",
       views: {
-        'menuContent': {
+        'tab-checklist': {
           templateUrl: "templates/checklist.html"
         }
       }
     })
-
-    .state('app.checklistAdd', {
-      url: "/checklist/add",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/checklist-add.html"
+      // CHECKLIST VIEW
+      .state('tab.checklist-detail', {
+        url: "/checklist/:checklistId",
+        views: {
+          'tab-checklist': {
+            templateUrl: "templates/checklist-detail.html"
+          }
         }
-      }
-    })
-
+      })
+      // CHECKLIST ADD
+      .state('tab.checklist-add', {
+        url: "/checklist/add",
+        views: {
+          'tab-checklist': {
+            templateUrl: "templates/checklist-add.html"
+          }
+        }
+      })
 
     /*
       PROPOSAL STATE
+      Users see their proposals submitted by real estate agents
     */
-    .state('app.proposals', {
-      url: "/proposals",
+    .state('tab.proposal', {
+      url: "/proposal",
       views: {
-        'menuContent': {
+        'tab-proposal': {
           templateUrl: "templates/proposal-list.html"
         }
       }
     })
-
-    .state('app.proposalsDetails', {
-      url: "/proposals/:id",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/proposal-detail.html"
+      // PROPOSAL DEATAIL
+      .state('tab.proposal-detail', {
+        url: "/proposal/:proposalId",
+        views: {
+          'tab-proposal': {
+            templateUrl: "templates/proposal-detail.html"
+          }
         }
-      }
-    })
+      })
 
     /*
-      REQUEST STATE
+      DIRECTORY STATE
+      Users browese a list of real estate agents
     */
-    .state('app.request', {
-      url: "/request",
+    .state('tab.directory', {
+      url: "/directory",
       views: {
-        'menuContent': {
-          templateUrl: "templates/request-commissions.html"
+        'tab-directory': {
+          templateUrl: "templates/agent-directory.html"
         }
       }
     })
-
-    .state('app.requestSubmit', {
-      url: "/request/submit",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/request-submit.html"
+      // AGENT PROFILE
+      .state('tab.directory-profile', {
+        url: '/directory/:agentId',
+        views: {
+          'tab-directory': {
+            templateUrl: 'templates/agent-profile.html'
+          }
         }
-      }
-    })
+      })
 
     /*
       FALLBACK STATE
+      If the route does not match any listed above, users redirected to this route
     */
     $urlRouterProvider.otherwise('/tab/home');
 
 
+
   // 2. Ionic Config
 
-  // Removes the title of the previous screen from the back button
+    /*
+      BACK BUTTON
+      Removes the title of the previous screen from the back button
+    */
     $ionicConfigProvider.backButton.previousTitleText(false).text('&emsp;&emsp;');
 });
