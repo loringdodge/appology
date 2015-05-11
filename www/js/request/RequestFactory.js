@@ -12,7 +12,8 @@ angular.module('app.RequestFactory', [])
       HELPER FUNCTIONS
     */
 
-      var something = function() {
+      // Request Validation
+      var isRequestValid = function() {
 
       }
 

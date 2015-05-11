@@ -21,13 +21,19 @@ angular.module('app.ProposalFactory', [])
     */
 
       // Get the proposal list for a user
-      var getProposalList = function() {
+      var getProposalList = function(user) {
+        return $http.get('/getProposals', user)
+          .then(function(res) {
 
+          });
       }
 
       // Get a specific proposal for a user
-      var getProposal = function() {
+      var getProposal = function(proposal) {
+        return $http.get('/getProposal', proposal)
+          .then(function(res) {
 
+          });
       }
 
     /*

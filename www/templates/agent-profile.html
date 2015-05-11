@@ -1,9 +1,15 @@
 <ion-view view-title="Agent Profile">
   <ion-content>
-    <ion-list>
-      <ion-item>
-        Agent Profile
-      </ion-item>
-    </ion-list>
+    <div class="card">
+      <div class="item item-text-wrap">
+        {{ profile.name }}
+      </div>
+      <div class="item item-text-wrap">
+        {{ profile.brokerage }}
+      </div>
+      <div class="item item-text-wrap">
+        {{ profile.reviews }}
+      </div>
+    </div>
   </ion-content>
 </ion-view>

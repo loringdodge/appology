@@ -7,7 +7,23 @@
 angular.module('app', [
   'ionic',
   'app.controllers',
+
+  // Factories
+  'app.AgentFactory',
+  'app.AuthFactory',
+  'app.ChecklistFactory',
+  'app.ProposalFactory',
+  'app.RequestFactory',
+
+  // Controllers
+  'app.DirectoryController',
+  'app.ProfileController',
   'app.LoginController',
+  'app.LogoutController',
+  'app.SignUpController',
+  'app.ProposalController',
+  'app.ProposalListController',
+  'app.RequestController'
 ])
 
 .run(function($ionicPlatform) {
@@ -123,7 +139,8 @@ angular.module('app', [
       url: '/proposal',
       views: {
         'tab-proposal': {
-          templateUrl: 'templates/tab-proposal.html'
+          templateUrl: 'templates/tab-proposal.html',
+          controller: 'ProposalListController'
         }
       }
     })
@@ -132,20 +149,22 @@ angular.module('app', [
         url: '/proposal/:proposalId',
         views: {
           'tab-proposal': {
-            templateUrl: 'templates/proposal-detail.html'
+            templateUrl: 'templates/proposal-detail.html',
+            controller: 'ProposalController'
           }
         }
       })
 
     /*
       DIRECTORY STATE
-      Users browese a list of real estate agents
+      Users browse a list of real estate agents
     */
     .state('tab.directory', {
       url: '/directory',
       views: {
         'tab-directory': {
-          templateUrl: 'templates/tab-directory.html'
+          templateUrl: 'templates/tab-directory.html',
+          controller: 'DirectoryController'
         }
       }
     })
@@ -154,7 +173,8 @@ angular.module('app', [
         url: '/directory/:agentId',
         views: {
           'tab-directory': {
-            templateUrl: 'templates/agent-profile.html'
+            templateUrl: 'templates/agent-profile.html',
+            controller: 'ProfileController'
           }
         }
       })

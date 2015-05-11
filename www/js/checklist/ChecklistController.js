@@ -2,6 +2,18 @@
 
   .controller('ChecklistController', function($scope, ChecklistFactory){
 
-    $scope.something = {};
+    /*
+      PRIVATE VARIABLES
+    */
+
+      // Object - profile information for a single agent
+      var user = {};
+
+    /*
+      SCOPE VARIABLES
+    */
+
+      // Array - list of checklist items
+      $scope.checklist = ChecklistFactory.checklist;
 
   });

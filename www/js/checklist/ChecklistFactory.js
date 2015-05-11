@@ -6,20 +6,20 @@ angular.module('app.ChecklistFactory', [])
       VARIABLES
     */
 
-      var checklist = {};
+      var checklist = [];
 
     /*
       FUNCTIONS
     */
 
       // Add a checklist item
-      var addItem = function() {
-
+      var addItem = function(item) {
+        checklist.push(item);
       }
 
       // Remove a checklist item
-      var removeItem = function() {
-
+      var removeItem = function(item) {
+        checklist.push(item);
       }
 
       // Toggle a checklist item as completed or not completed
@@ -31,6 +31,7 @@ angular.module('app.ChecklistFactory', [])
       RETURN
     */
     return {
+      checklist: checklist,
       addItem: addItem,
       removeItem: removeItem,
       toggleCheck: toggleCheck
