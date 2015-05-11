@@ -4,7 +4,11 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers'])
+angular.module('app', [
+  'ionic',
+  'app.controllers',
+  'app.LoginController',
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -38,9 +42,10 @@ angular.module('app', ['ionic', 'app.controllers'])
       right side menu navigation
     */
     .state('tab', {
-      url: "/tab",
+      url: '/tab',
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: 'templates/tabs.html',
+      controller: 'LoginController'
     })
 
 
@@ -75,19 +80,19 @@ angular.module('app', ['ionic', 'app.controllers'])
       Users submit their personal information in order to get proposals
     */
     .state('tab.request', {
-      url: "/request",
+      url: '/request',
       views: {
         'tab-request': {
-          templateUrl: "templates/request-commissions.html"
+          templateUrl: 'templates/request-commissions.html'
         }
       }
     })
       // REQUEST VIEW
       .state('tab.request-submit', {
-        url: "/request/submit",
+        url: '/request/submit',
         views: {
           'tab-request': {
-            templateUrl: "templates/request-submit.html"
+            templateUrl: 'templates/request-submit.html'
           }
         }
       })
@@ -98,28 +103,28 @@ angular.module('app', ['ionic', 'app.controllers'])
       Users check off from a list of things to be done in order to sell their home
     */
     .state('tab.checklist', {
-      url: "/checklist",
+      url: '/checklist',
       views: {
         'tab-checklist': {
-          templateUrl: "templates/checklist.html"
+          templateUrl: 'templates/checklist.html'
         }
       }
     })
       // CHECKLIST VIEW
       .state('tab.checklist-detail', {
-        url: "/checklist/:checklistId",
+        url: '/checklist/:checklistId',
         views: {
           'tab-checklist': {
-            templateUrl: "templates/checklist-detail.html"
+            templateUrl: 'templates/checklist-detail.html'
           }
         }
       })
       // CHECKLIST ADD
       .state('tab.checklist-add', {
-        url: "/checklist/add",
+        url: '/checklist/add',
         views: {
           'tab-checklist': {
-            templateUrl: "templates/checklist-add.html"
+            templateUrl: 'templates/checklist-add.html'
           }
         }
       })
@@ -129,19 +134,19 @@ angular.module('app', ['ionic', 'app.controllers'])
       Users see their proposals submitted by real estate agents
     */
     .state('tab.proposal', {
-      url: "/proposal",
+      url: '/proposal',
       views: {
         'tab-proposal': {
-          templateUrl: "templates/proposal-list.html"
+          templateUrl: 'templates/proposal-list.html'
         }
       }
     })
       // PROPOSAL DEATAIL
       .state('tab.proposal-detail', {
-        url: "/proposal/:proposalId",
+        url: '/proposal/:proposalId',
         views: {
           'tab-proposal': {
-            templateUrl: "templates/proposal-detail.html"
+            templateUrl: 'templates/proposal-detail.html'
           }
         }
       })
@@ -151,10 +156,10 @@ angular.module('app', ['ionic', 'app.controllers'])
       Users browese a list of real estate agents
     */
     .state('tab.directory', {
-      url: "/directory",
+      url: '/directory',
       views: {
         'tab-directory': {
-          templateUrl: "templates/agent-directory.html"
+          templateUrl: 'templates/agent-directory.html'
         }
       }
     })
