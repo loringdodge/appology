@@ -11,7 +11,10 @@
       $scope.proposal = {
         id: 1,
         name: "Proposal",
-        agent: "Loring Dodge"
+        agent: "Loring Dodge",
+        fees: '5%',
+        services: 'lots of stuff',
+        questions: 'what is your name?'
       }
 
   });

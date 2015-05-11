@@ -21,6 +21,7 @@ angular.module('app', [
   'app.LoginController',
   'app.LogoutController',
   'app.SignUpController',
+  'app.ChecklistController',
   'app.ProposalController',
   'app.ProposalListController',
   'app.RequestController'
@@ -78,7 +79,7 @@ angular.module('app', [
     })
 
     /*
-      REQUEST STATE
+      * REQUEST STATE
       Users submit their personal information in order to get proposals
     */
     .state('tab.request', {
@@ -89,7 +90,7 @@ angular.module('app', [
         }
       }
     })
-      // REQUEST VIEW
+      // ** View
       .state('tab.request-submit', {
         url: '/request/submit',
         views: {
@@ -101,18 +102,19 @@ angular.module('app', [
 
 
     /*
-      CHECKLIST STATE
+      * CHECKLIST STATE
       Users check off from a list of things to be done in order to sell their home
     */
     .state('tab.checklist', {
       url: '/checklist',
       views: {
         'tab-checklist': {
-          templateUrl: 'templates/tab-checklist.html'
+          templateUrl: 'templates/tab-checklist.html',
+          controller: 'ChecklistController'
         }
       }
     })
-      // CHECKLIST VIEW
+      // ** View
       .state('tab.checklist-detail', {
         url: '/checklist/:checklistId',
         views: {
@@ -121,7 +123,7 @@ angular.module('app', [
           }
         }
       })
-      // CHECKLIST ADD
+      // ** Add
       .state('tab.checklist-add', {
         url: '/checklist/add',
         views: {
@@ -132,7 +134,7 @@ angular.module('app', [
       })
 
     /*
-      PROPOSAL STATE
+      * PROPOSAL STATE
       Users see their proposals submitted by real estate agents
     */
     .state('tab.proposal', {
@@ -144,7 +146,7 @@ angular.module('app', [
         }
       }
     })
-      // PROPOSAL DEATAIL
+      // ** Detail
       .state('tab.proposal-detail', {
         url: '/proposal/:proposalId',
         views: {
@@ -154,9 +156,40 @@ angular.module('app', [
           }
         }
       })
+        // *** Fees
+        .state('tab.proposal-detail.fees', {
+          url: '/fees',
+          views: {
+            'proposal-view': {
+              templateUrl: 'templates/proposal-detail-fees.html',
+              controller: 'ProposalController'
+            }
+          }
+        })
 
+        // *** Service
+        .state('tab.proposal-detail.service', {
+          url: '/services',
+          views: {
+            'proposal-view': {
+              templateUrl: 'templates/proposal-detail-services.html',
+              controller: 'ProposalController'
+            }
+          }
+        })
+
+        // *** Questions
+        .state('tab.proposal-detail.questions', {
+          url: '/questions',
+          views: {
+            'proposal-view': {
+              templateUrl: 'templates/proposal-detail-questions.html',
+              controller: 'ProposalController'
+            }
+          }
+        })
     /*
-      DIRECTORY STATE
+      * DIRECTORY STATE
       Users browse a list of real estate agents
     */
     .state('tab.directory', {
@@ -168,7 +201,7 @@ angular.module('app', [
         }
       }
     })
-      // AGENT PROFILE
+      // ** Profile
       .state('tab.directory-profile', {
         url: '/directory/:agentId',
         views: {
@@ -178,6 +211,26 @@ angular.module('app', [
           }
         }
       })
+        // *** Info
+        .state('tab.directory-profile.info', {
+          url: '/info',
+          views: {
+            'profile-view': {
+              templateUrl: 'templates/agent-profile-info.html',
+              controller: 'ProfileController'
+            }
+          }
+        })
+        // *** Reviews
+        .state('tab.directory-profile.reviews', {
+          url: '/reviews',
+          views: {
+            'profile-view': {
+              templateUrl: 'templates/agent-profile-reviews.html',
+              controller: 'ProfileController'
+            }
+          }
+        })
 
     /*
       FALLBACK STATE

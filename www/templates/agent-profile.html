@@ -4,12 +4,13 @@
       <div class="item item-text-wrap">
         {{ profile.name }}
       </div>
-      <div class="item item-text-wrap">
-        {{ profile.brokerage }}
-      </div>
-      <div class="item item-text-wrap">
-        {{ profile.reviews }}
-      </div>
     </div>
+    <div class="button-bar padding">
+      <a class="button" href="#/tab/directory/1/info">Info</a>
+      <a class="button" href="#/tab/directory/1/reviews">Reviews</a>
+    </div>
+
+    <div ui-view="profile-view"></div>
+
   </ion-content>
 </ion-view>

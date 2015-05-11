@@ -1,15 +1,18 @@
-<ion-view view-title="Agent Profile">
+<ion-view view-title="Proposal Detail">
   <ion-content>
     <div class="card">
-      <div class="item item-text-wrap">
-        {{ proposal.id }}
-      </div>
-      <div class="item item-text-wrap">
-        {{ proposal.name }}
-      </div>
       <div class="item item-text-wrap">
         {{ proposal.agent }}
       </div>
     </div>
+
+    <div class="button-bar padding">
+      <a class="button" href="#/tab/proposal/1/fees">Fees</a>
+      <a class="button" href="#/tab/proposal/1/services">Services</a>
+      <a class="button" href="#/tab/proposal/1/questions">Questions</a>
+    </div>
+
+    <div ui-view="proposal-view"></div>
+
   </ion-content>
 </ion-view>

@@ -1,12 +1,15 @@
 <ion-view view-title="Checklist">
   <ion-content>
-    <ion-list>
-      <ion-item href="#/tab/checklist/1">
-        Checklist Detail
-      </ion-item>
-      <ion-item href="#/tab/checklist/add">
-        Checklist Add
-      </ion-item>
-    </ion-list>
+
+    <ul class="list">
+
+      <li class="item item-checkbox" ng-repeat="item in checklist">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+        {{ item.name }}
+      </li>
+
+    </ul>
   </ion-content>
 </ion-view>

@@ -11,7 +11,14 @@
       $scope.profile = {
         name: "Loring",
         brokerage: "UpNest",
-        reviews: 5
+        stars: 5,
+        reviews: [{
+          name: 'Jim',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        }, {
+          name: 'Jimmy',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        }]
       }
 
   });
