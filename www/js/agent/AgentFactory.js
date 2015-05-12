@@ -3,34 +3,24 @@ angular.module('app.AgentFactory', [])
   .factory('AgentFactory', function($http){
 
     /*
-      VARIABLES
-    */
-
-      var thing = {};
-
-    /*
-      HELPER FUNCTIONS
-    */
-
-      var something = function() {
-
-      }
-
-    /*
       HTTP FUNCTIONS
     */
 
-      // Get the directly of agents
+      // Get the directory of agents
       var getDirectory = function() {
-        return $http.get('/getAgents')
+        console.log('yo');
+        return $http.get('/api/agents')
           .then(function(res){
             return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
           });
       }
 
       // Get a single agent
       var getAgent = function(agent) {
-        return $http.get('/getAgent', agent)
+        return $http.get('/api/agent', agent)
           .then(function(res){
 
           });

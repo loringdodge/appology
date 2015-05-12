@@ -1,9 +1,33 @@
-<ion-view view-title="Proposal List">
+<ion-view view-title="Proposals">
   <ion-content>
-    <ion-list>
-      <ion-item href="#/tab/proposal/1" ng-repeat="proposal in proposalList">
-        Proposal List {{ $index }}
-      </ion-item>
-    </ion-list>
+
+    <swipe-cards>
+      <swipe-card on-card-swipe="cardSwiped()" id="start-card">
+        Swipe down for a new card
+      </swipe-card>
+      <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
+        <div ng-controller="CardCtrl">
+          <div class="title">
+            {{card.title}}
+          </div>
+          <div class="image">
+            <img ng-src="{{card.image}}">
+          </div>
+          <div class="button-bar">
+            <button class="button button-clear button-positive" ng-click="goAway()">Answer</button>
+            <button class="button button-clear button-positive" ng-click="goAway()">Decline</button>
+          </div>
+        </div>
+      </swipe-card>
+    </swipe-cards>
+
+<!--     <div class="list">
+      <a class="item item-avatar" href="#/tab/proposal/{{ proposal.agent_id }}" ng-repeat="proposal in proposalList">
+        <img src="{{ proposal.photo }}">
+        <h2>{{ proposal.name }}</h2>
+        <p>{{ proposal.brokerage }}</p>
+      </a>
+    </div>
+ -->
   </ion-content>
 </ion-view>

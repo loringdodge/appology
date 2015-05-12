@@ -1,6 +1,14 @@
  angular.module('app.ProposalController', [])
 
-  .controller('ProposalController', function($scope, ProposalFactory){
+  .controller('ProposalController', function($scope, $state, ProposalFactory){
+
+    /*
+      INITIAL LOAD
+    */
+
+    // $scope.$on('$viewContentLoaded', function() {
+    //   $state.go('tab.proposal-detail.fees');
+    // });
 
     /*
       SCOPE VARIABLES

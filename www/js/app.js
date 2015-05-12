@@ -24,7 +24,9 @@ angular.module('app', [
   'app.ChecklistController',
   'app.ProposalController',
   'app.ProposalListController',
-  'app.RequestController'
+  'app.RequestController',
+
+  'ionic.contrib.ui.cards'
 ])
 
 .run(function($ionicPlatform) {
@@ -39,6 +41,19 @@ angular.module('app', [
       StatusBar.styleDefault();
     }
   });
+})
+
+.directive('noScroll', function($document) {
+
+  return {
+    restrict: 'A',
+    link: function($scope, $element, $attr) {
+
+      $document.on('touchmove', function(e) {
+        e.preventDefault();
+      });
+    }
+  }
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {

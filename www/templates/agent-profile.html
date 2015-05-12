@@ -1,13 +1,36 @@
 <ion-view view-title="Agent Profile">
   <ion-content>
-    <div class="card">
-      <div class="item item-text-wrap">
-        {{ profile.name }}
+
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="{{ profile.photo }}">
+        <h2>{{ profile.name }}</h2>
+        <p>{{ profile.brokerage }}</p>
+      </div>
+
+      <div class="item item-body">
+        <p>{{ profile.about }}</p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
       </div>
     </div>
+
     <div class="button-bar padding">
-      <a class="button" href="#/tab/directory/1/info">Info</a>
-      <a class="button" href="#/tab/directory/1/reviews">Reviews</a>
+      <a class="button" href="#/tab/directory/{{ profile.agent_id }}/info">Info</a>
+      <a class="button" href="#/tab/directory/{{ profile.agent_id }}/reviews">Reviews</a>
     </div>
 
     <div ui-view="profile-view"></div>

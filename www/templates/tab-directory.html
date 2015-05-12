@@ -1,9 +1,21 @@
-<ion-view view-title="Directory">
+<ion-view view-title="Agents">
   <ion-content>
-    <ion-list>
-      <ion-item href="#/tab/directory/1" ng-repeat="agent in directoryList">
-        Profile {{$index}}
-      </ion-item>
+
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Zip Code">
+        </label>
+        <button class="button button-small">
+          Submit
+        </button>
+      </div>
+      <a class="item item-avatar" href="#/tab/directory/{{ agent.agent_id }}" ng-repeat="agent in directoryList">
+        <img src="{{ agent.photo }}">
+        <h2>{{ agent.name }}</h2>
+        <p>{{ agent.brokerage }}</p>
+      </a>
     </ion-list>
+
   </ion-content>
 </ion-view>

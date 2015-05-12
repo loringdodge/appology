@@ -1,8 +1,12 @@
 <div class="card" ng-repeat="review in profile.reviews">
-  <div class="item item-text-wrap">
-    {{ review.name }}
+  <div class="item item-avatar">
+    <img src="{{ review.photo_url }}">
+    <h2>{{ review.name }}</h2>
+    <p>{{ review.rating }}</p>
   </div>
   <div class="item item-text-wrap">
-    {{ review.text }}
+    <p>
+      {{ review.summary }}
+    </p>
   </div>
 </div>

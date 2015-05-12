@@ -1,8 +1,8 @@
 <div class="card">
   <div class="item item-text-wrap">
-    {{ profile.brokerage }}
-  </div>
-  <div class="item item-text-wrap">
-    {{ profile.stars }}
+    <h2>Education:</h2>
+    <p ng-repeat="item in profile.education">
+      {{ item }}
+    </p>
   </div>
 </div>

@@ -3,20 +3,6 @@ angular.module('app.ProposalFactory', [])
   .factory('ProposalFactory', function($http){
 
     /*
-      VARIABLES
-    */
-
-      var thing = {};
-
-    /*
-      HELPER FUNCTIONS
-    */
-
-      var something = function() {
-
-      }
-
-    /*
       HTTP FUNCTIONS
     */
 

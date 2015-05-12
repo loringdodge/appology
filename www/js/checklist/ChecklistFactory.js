@@ -30,11 +30,12 @@ angular.module('app.ChecklistFactory', [])
     /*
       RETURN
     */
-    return {
-      checklist: checklist,
-      addItem: addItem,
-      removeItem: removeItem,
-      toggleCheck: toggleCheck
-    }
+
+      return {
+        checklist: checklist,
+        addItem: addItem,
+        removeItem: removeItem,
+        toggleCheck: toggleCheck
+      }
 
   });
