@@ -1,8 +1,10 @@
 <ion-view view-title="Proposal Detail">
   <ion-content>
-    <div class="card">
-      <div class="item item-text-wrap">
-        {{ proposal.agent }}
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="{{ proposal.photo }}">
+        <h2>{{ proposal.name }}</h2>
+        <p>{{ proposal.brokerage }}</p>
       </div>
     </div>
 

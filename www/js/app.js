@@ -163,7 +163,7 @@ angular.module('app', [
       }
     })
       // ** Detail
-      .state('tab.proposal.detail', {
+      .state('tab.proposal', {
         url: '/proposal/:proposalId',
         views: {
           'tab-proposals': {
