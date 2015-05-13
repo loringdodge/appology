@@ -102,7 +102,7 @@ angular.module('app', [
       url: '/request',
       views: {
         'tab-request': {
-          templateUrl: 'templates/tab-commissions.html'
+          templateUrl: 'templates/tab-request.html'
         }
       }
     })

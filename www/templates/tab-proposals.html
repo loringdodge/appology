@@ -8,10 +8,10 @@
       <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
         <div ng-controller="CardCtrl">
           <div class="title">
-            {{card.title}}
+            {{card.name}}
           </div>
           <div class="image">
-            <img ng-src="{{card.image}}">
+            <img ng-src="{{card.photo}}">
           </div>
           <div class="button-bar">
             <button class="button button-clear button-positive" ng-click="goAway()">Answer</button>

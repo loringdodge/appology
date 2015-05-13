@@ -3,26 +3,18 @@ angular.module('app.AuthFactory', [])
   .factory('AuthFactory', function($http){
 
     /*
-      VARIABLES
-    */
-
-      var thing = {};
-
-    /*
-      HELPER FUNCTIONS
-    */
-
-      var something = function() {
-
-      }
-
-    /*
       HTTP FUNCTIONS
     */
 
       // Login user
-      var login = function() {
-
+      var login = function(user) {
+        return $http.post('/login', data)
+          .then(function(res){
+            return res.data;
+          }).
+          catch(function(err){
+            console.log(err);
+          });
       }
 
       // Logout user
@@ -32,7 +24,13 @@ angular.module('app.AuthFactory', [])
 
       // Signup new user
       var signup = function() {
-
+        return $http.post('/signup', data)
+          .then(function(res){
+            return res.data;
+          }).
+          catch(function(err){
+            console.log(err);
+          });
       }
 
     /*
