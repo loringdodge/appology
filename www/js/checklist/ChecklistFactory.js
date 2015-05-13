@@ -6,7 +6,17 @@ angular.module('app.ChecklistFactory', [])
       VARIABLES
     */
 
-      var checklist = [];
+      var checklist = [{
+          name: 'Get agent'
+        },{
+          name: 'Get another agent'
+        },{
+          name: 'List house'
+        },{
+          name: 'Make flyers'
+        },{
+          name: 'Sell house'
+      }]
 
     /*
       FUNCTIONS

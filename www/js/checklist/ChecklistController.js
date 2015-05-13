@@ -15,16 +15,6 @@
 
       // Array - list of checklist items
       // $scope.checklist = ChecklistFactory.checklist;
-      $scope.checklist = [{
-          name: 'Get agent'
-        },{
-          name: 'Get another agent'
-        },{
-          name: 'List house'
-        },{
-          name: 'Make flyers'
-        },{
-          name: 'Sell house'
-      }];
+      $scope.checklist = ChecklistFactory.checklist;
 
   });

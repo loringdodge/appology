@@ -16,8 +16,8 @@ angular.module('app', [
   'app.RequestFactory',
 
   // Controllers
-  'app.DirectoryController',
-  'app.ProfileController',
+  'app.AgentsController',
+  'app.AgentController',
   'app.LoginController',
   'app.LogoutController',
   'app.SignUpController',
@@ -212,7 +212,7 @@ angular.module('app', [
       views: {
         'tab-directory': {
           templateUrl: 'templates/tab-directory.html',
-          controller: 'DirectoryController'
+          controller: 'AgentsController'
         }
       }
     })
@@ -222,7 +222,7 @@ angular.module('app', [
         views: {
           'tab-directory': {
             templateUrl: 'templates/agent-profile.html',
-            controller: 'ProfileController'
+            controller: 'AgentController'
           }
         }
       })

@@ -1,7 +1,23 @@
 <ion-view view-title="Checklist">
   <ion-content>
 
-    <ul class="list">
+    <div class="list">
+      <div class="item item-input-inset">
+        <div class="button-bar padding">
+          <a class="button">Add an item</a>
+        </div>
+      </div>
+
+      <ion-list>
+        <ion-item class="item-checkbox-custom">
+          <label class="checkbox">
+            <input type="checkbox">
+          </label>
+          I love kittens!
+          <ion-option-button class="button-positive">Share</ion-option-button>
+          <ion-option-button class="button-assertive">Edit</ion-option-button>
+        </ion-item>
+      </ion-list>
 
       <li class="item item-checkbox" ng-repeat="item in checklist">
         <label class="checkbox">
@@ -9,6 +25,7 @@
         </label>
         {{ item.name }}
       </li>
+    </div>
 
     </ul>
   </ion-content>

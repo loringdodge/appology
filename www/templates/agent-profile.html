@@ -3,13 +3,13 @@
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="{{ profile.photo }}">
-        <h2>{{ profile.name }}</h2>
-        <p>{{ profile.brokerage }}</p>
+        <img src="{{ agent.photo }}">
+        <h2>{{ agent.name }}</h2>
+        <p>{{ agent.brokerage }}</p>
       </div>
 
       <div class="item item-body">
-        <p>{{ profile.about }}</p>
+        <p>{{ agent.about }}</p>
       </div>
 
       <div class="item tabs tabs-secondary tabs-icon-left">
@@ -29,8 +29,8 @@
     </div>
 
     <div class="button-bar padding">
-      <a class="button" href="#/tab/directory/{{ profile.agent_id }}/info">Info</a>
-      <a class="button" href="#/tab/directory/{{ profile.agent_id }}/reviews">Reviews</a>
+      <a class="button" href="#/tab/directory/{{ agent.agent_id }}/info">Info</a>
+      <a class="button" href="#/tab/directory/{{ agent.agent_id }}/reviews">Reviews</a>
     </div>
 
     <div ui-view="profile-view"></div>

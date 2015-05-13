@@ -6,10 +6,10 @@ angular.module('app.AgentFactory', [])
       HTTP FUNCTIONS
     */
 
-      // Get the directory of agents
-      var getDirectory = function() {
+      // Get a list of agents
+      var getAgents = function() {
         console.log('yo');
-        return $http.get('/api/agents')
+        return $http.get('http://localhost:8888/api/agents')
           .then(function(res){
             return res.data;
           })
@@ -20,9 +20,12 @@ angular.module('app.AgentFactory', [])
 
       // Get a single agent
       var getAgent = function(agent) {
-        return $http.get('/api/agent', agent)
+        return $http.get('http://localhost:8888/api/agent', agent)
           .then(function(res){
-
+            return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
           });
       }
 
@@ -30,7 +33,7 @@ angular.module('app.AgentFactory', [])
       RETURN
     */
     return {
-      getDirectory: getDirectory,
+      getAgents: getAgents,
       getAgent: getAgent
     }
 
