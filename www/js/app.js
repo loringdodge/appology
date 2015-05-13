@@ -23,9 +23,10 @@ angular.module('app', [
   'app.SignUpController',
   'app.ChecklistController',
   'app.ProposalController',
-  'app.ProposalListController',
+  'app.ProposalsController',
   'app.RequestController',
 
+  // Modules
   'ionic.contrib.ui.cards'
 ])
 
@@ -59,12 +60,12 @@ angular.module('app', [
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
 /******** CONTENTS *********
-  1. Routes
+  1. States
   2. Ionic Config
 ****************************
 */
 
-  // 1. Routes
+  // 1. States
 
     $stateProvider
 
@@ -152,31 +153,31 @@ angular.module('app', [
       * PROPOSAL STATE
       Users see their proposals submitted by real estate agents
     */
-    .state('tab.proposal', {
-      url: '/proposal',
+    .state('tab.proposals', {
+      url: '/proposals/:userId',
       views: {
-        'tab-proposal': {
-          templateUrl: 'templates/tab-proposal.html',
-          controller: 'ProposalListController'
+        'tab-proposals': {
+          templateUrl: 'templates/tab-proposals.html',
+          controller: 'ProposalsController'
         }
       }
     })
       // ** Detail
-      .state('tab.proposal-detail', {
+      .state('tab.proposal.detail', {
         url: '/proposal/:proposalId',
         views: {
-          'tab-proposal': {
-            templateUrl: 'templates/proposal-detail.html',
+          'tab-proposals': {
+            templateUrl: 'templates/proposal.html',
             controller: 'ProposalController'
           }
         }
       })
         // *** Fees
-        .state('tab.proposal-detail.fees', {
+        .state('tab.proposal.fees', {
           url: '/fees',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-detail-fees.html',
+              templateUrl: 'templates/proposal-fees.html',
               controller: 'ProposalController'
             }
           }
@@ -187,7 +188,7 @@ angular.module('app', [
           url: '/services',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-detail-services.html',
+              templateUrl: 'templates/proposal-services.html',
               controller: 'ProposalController'
             }
           }
@@ -198,51 +199,51 @@ angular.module('app', [
           url: '/questions',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-detail-questions.html',
+              templateUrl: 'templates/proposal-questions.html',
               controller: 'ProposalController'
             }
           }
         })
     /*
-      * DIRECTORY STATE
+      * AGENT STATE
       Users browse a list of real estate agents
     */
-    .state('tab.directory', {
-      url: '/directory',
+    .state('tab.agents', {
+      url: '/agents',
       views: {
-        'tab-directory': {
-          templateUrl: 'templates/tab-directory.html',
+        'tab-agents': {
+          templateUrl: 'templates/tab-agents.html',
           controller: 'AgentsController'
         }
       }
     })
       // ** Profile
-      .state('tab.directory-profile', {
-        url: '/directory/:agentId',
+      .state('tab.agent', {
+        url: '/agent/:agentId',
         views: {
-          'tab-directory': {
-            templateUrl: 'templates/agent-profile.html',
+          'tab-agents': {
+            templateUrl: 'templates/agent.html',
             controller: 'AgentController'
           }
         }
       })
         // *** Info
-        .state('tab.directory-profile.info', {
+        .state('tab.agent.info', {
           url: '/info',
           views: {
             'profile-view': {
-              templateUrl: 'templates/agent-profile-info.html',
-              controller: 'ProfileController'
+              templateUrl: 'templates/agent-info.html',
+              controller: 'AgentController'
             }
           }
         })
         // *** Reviews
-        .state('tab.directory-profile.reviews', {
+        .state('tab.agent.reviews', {
           url: '/reviews',
           views: {
             'profile-view': {
-              templateUrl: 'templates/agent-profile-reviews.html',
-              controller: 'ProfileController'
+              templateUrl: 'templates/agent-reviews.html',
+              controller: 'AgentController'
             }
           }
         })

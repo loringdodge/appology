@@ -6,27 +6,33 @@ angular.module('app.ProposalFactory', [])
       HTTP FUNCTIONS
     */
 
-      // Get the proposal list for a user
-      var getProposalList = function(user) {
-        return $http.get('/getProposals', user)
+      // Get proposals from a user
+      var getProposals = function(userId) {
+        return $http.get('http://localhost:8888/api/proposals/' + userId)
           .then(function(res) {
-
+            return res.data
+          })
+          .catch(function(err){
+            console.log(err);
           });
       }
 
-      // Get a specific proposal for a user
-      var getProposal = function(proposal) {
-        return $http.get('/getProposal', proposal)
+      // Get a single proposal from a user
+      var getProposal = function(proposalId) {
+        return $http.get('http://localhost:8888/api/proposal/' + proposalId)
           .then(function(res) {
-
-          });
+            return res.data;
+          })
+          .catch(function(res){
+            console.log(err);
+          })
       }
 
     /*
       RETURN
     */
     return {
-      getProposalList: getProposalList,
+      getProposals: getProposals,
       getProposal: getProposal
     }
 

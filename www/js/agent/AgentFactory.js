@@ -19,8 +19,8 @@ angular.module('app.AgentFactory', [])
       }
 
       // Get a single agent
-      var getAgent = function(agent) {
-        return $http.get('http://localhost:8888/api/agent', agent)
+      var getAgent = function(agentId) {
+        return $http.get('http://localhost:8888/api/agent/' + agentId)
           .then(function(res){
             return res.data;
           })

@@ -8,8 +8,8 @@
 
       // Object - Profile information for a single agent
       AgentFactory.getAgent($stateParams.agentId)
-        .then(function (res) {
-          $scope.agent = res;
+        .then(function (data) {
+          $scope.agent = data;
         })
         .catch(function (err) {
           console.log('ERR on getAgent', err);
