@@ -7,11 +7,18 @@
     */
 
       // Array - list of checklist items
-      // $scope.checklist = ChecklistFactory.checklist;
       $scope.checklist = ChecklistFactory.checklist;
 
+      var deleteButtonBool = false;
       $scope.showDeleteButtons = function() {
-        $ionicListDelegate.showDelete(true);
+        deleteButtonBool = !deleteButtonBool;
+        $ionicListDelegate.showDelete(deleteButtonBool);
+      };
+
+      var reorderButtonBool = false;
+      $scope.showReorderButtons = function() {
+        reorderButtonBool = !reorderButtonBool;
+        $ionicListDelegate.showReorder(reorderButtonBool);
       };
 
       $scope.moveItem = function(item, fromIndex, toIndex) {
@@ -20,7 +27,6 @@
       };
 
       $scope.onItemDelete = function(item) {
-        console.log(item);
         $scope.checklist.splice($scope.checklist.indexOf(item), 1);
       };
 

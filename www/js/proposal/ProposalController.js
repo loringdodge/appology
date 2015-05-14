@@ -7,7 +7,6 @@
     */
 
       // Array - list of checklist items
-      // $scope.proposal = ProposalFactory.getProposal();
       ProposalFactory.getProposal($stateParams.proposalId)
         .then(function(data){
           $scope.proposal = data;
