@@ -3,9 +3,11 @@
 /******************
   * CONTENTS
     1. Card Swipe
+    2. Flex Vertical Center
+    3. ionic-checkbox-custom
 *******************/
 
-    /* 1. Card Swipe*/
+  /* 1. Card Swipe */
     .ionic-logo {
       display: block;
       margin: 15px auto;
@@ -107,6 +109,8 @@
       -webkit-animation: bounceIn 0.4s ease-out;
     }
 
+
+  /* 2. Flex Vertical Center */
     .center {
       display: -webkit-box;
       display: -moz-box;
@@ -138,6 +142,7 @@
       align-items: center;
     }
 
+  /* 3. item-checkbox-custom */
     .item-checkbox-custom {
       padding-left: 0px;
     }
@@ -151,6 +156,10 @@
       left: 8px;
       z-index: 3;
       margin-top: -21px;
+    }
+
+    .item-checkbox-custom .text {
+      margin-left: 45px;
     }
 
     .item-checkbox-custom.item-checkbox-right {

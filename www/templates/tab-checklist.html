@@ -4,27 +4,28 @@
     <div class="list">
       <div class="item item-input-inset">
         <div class="button-bar padding">
-          <a class="button">Add an item</a>
+          <a class="button">Add</a>
+        </div>
+        <div class="button-bar padding">
+          <a class="button" ng-click="showDeleteButtons()">Remove</a>
         </div>
       </div>
 
       <ion-list>
-        <ion-item class="item-checkbox-custom">
+        <ion-item class="item-checkbox-custom item-remove-animate" ng-repeat="item in checklist">
+          <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
           <label class="checkbox">
             <input type="checkbox">
           </label>
-          I love kittens!
+          <div class="text">
+            {{ item.name }}
+          </div>
+          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
           <ion-option-button class="button-positive">Share</ion-option-button>
           <ion-option-button class="button-assertive">Edit</ion-option-button>
         </ion-item>
       </ion-list>
 
-      <li class="item item-checkbox" ng-repeat="item in checklist">
-        <label class="checkbox">
-          <input type="checkbox">
-        </label>
-        {{ item.name }}
-      </li>
     </div>
 
     </ul>
