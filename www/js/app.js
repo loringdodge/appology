@@ -106,7 +106,8 @@ angular.module('app', [
       url: '/request',
       views: {
         'tab-request': {
-          templateUrl: 'templates/tab-request.html'
+          templateUrl: 'templates/tab-request.html',
+          controller: 'RequestController'
         }
       }
     })
@@ -115,7 +116,8 @@ angular.module('app', [
         url: '/request/submit',
         views: {
           'tab-request': {
-            templateUrl: 'templates/request-submit.html'
+            templateUrl: 'templates/request-submit.html',
+            controller: 'RequestController'
           }
         }
       })

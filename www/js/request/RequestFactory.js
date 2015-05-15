@@ -3,17 +3,11 @@ angular.module('app.RequestFactory', [])
   .factory('RequestFactory', function($http){
 
     /*
-      VARIABLES
-    */
-
-      var thing = {};
-
-    /*
       HTTP FUNCTIONS
     */
 
       var getBellData = function() {
-        return $http.get('/bell').
+        return $http.get('http://localhost:8888/api/bell')
           .then(function(res){
             return res.data;
           })
@@ -24,7 +18,7 @@ angular.module('app.RequestFactory', [])
 
       // Post a new request
       var postRequest = function(data) {
-        return $http.get('/request', data)
+        return $http.post('http://localhost:8888/api/request', data)
           .then(function(res){
             return res.data;
           })
