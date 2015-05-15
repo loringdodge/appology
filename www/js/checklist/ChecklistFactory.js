@@ -22,14 +22,20 @@ angular.module('app.ChecklistFactory', [])
       FUNCTIONS
     */
 
+      // Move item to a different index of array
       var moveItem = function(item, fromIndex, toIndex) {
         checklist.splice(fromIndex, 1);
         checklist.splice(toIndex, 0, item);
       };
 
+      // Delete item from array
       var onItemDelete = function(item) {
         checklist.splice(checklist.indexOf(item), 1);
       };
+
+      var addItem = function(item){
+        checklist.push(item);
+      }
 
     /*
       RETURN
@@ -38,7 +44,8 @@ angular.module('app.ChecklistFactory', [])
       return {
         checklist: checklist,
         moveItem: moveItem,
-        onItemDelete: onItemDelete
+        onItemDelete: onItemDelete,
+        addItem: addItem
       }
 
   });

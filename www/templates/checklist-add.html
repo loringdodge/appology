@@ -8,9 +8,9 @@
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
           <i class="icon ion-ios-pricetag placeholder-icon"></i>
-          <input type="search" placeholder="What do you need to do?">
+          <input type="search" ng-model="item.name" ng-required="true" ng-minlength="1" placeholder="What do you need to do?">
         </label>
-        <button class="button button-small">
+        <button ng-click="addItem(item)" class="button button-small">
           Submit
         </button>
       </div>

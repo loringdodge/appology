@@ -9,6 +9,13 @@
       // Array - list of checklist items
       $scope.checklist = ChecklistFactory.checklist;
 
+      // Object - ngModel for addItem input (modal)
+      $scope.item = {};
+
+    /*
+      SCOPE FUNCTIONS
+    */
+
       // Function - Moves an item during reorder
       $scope.moveItem = ChecklistFactory.moveItem;
 
@@ -62,4 +69,9 @@
         // Execute action
       });
 
-      });
+      $scope.addItem = function(item){
+        ChecklistFactory.addItem(item);
+        $scope.modal.hide();
+      }
+
+    });
