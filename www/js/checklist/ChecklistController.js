@@ -22,6 +22,12 @@
       // Function - Delete an item from the checklist
       $scope.onItemDelete = ChecklistFactory.onItemDelete;
 
+      // Function - Add an item
+      $scope.addItem = function(item){
+        ChecklistFactory.addItem(item);
+        $scope.modal.hide();
+      }
+
       // Function - Toggle delete buttons
       var deleteButtonBool = false;
       $scope.showDeleteButtons = function() {
@@ -68,10 +74,5 @@
       $scope.$on('modal.removed', function() {
         // Execute action
       });
-
-      $scope.addItem = function(item){
-        ChecklistFactory.addItem(item);
-        $scope.modal.hide();
-      }
 
     });

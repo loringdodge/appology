@@ -9,27 +9,35 @@ angular.module('app.RequestFactory', [])
       var thing = {};
 
     /*
-      HELPER FUNCTIONS
-    */
-
-      // Request Validation
-      var isRequestValid = function() {
-
-      }
-
-    /*
       HTTP FUNCTIONS
     */
 
-      // Post a new request
-      var postRequest = function() {
+      var getBellData = function() {
+        return $http.get('/bell').
+          .then(function(res){
+            return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
+          });
+      }
 
+      // Post a new request
+      var postRequest = function(data) {
+        return $http.get('/request', data)
+          .then(function(res){
+            return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
+          });
       }
 
     /*
       RETURN
     */
     return {
+      getBellData: getBellData,
       postRequest: postRequest
     }
 

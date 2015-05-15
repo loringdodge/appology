@@ -2,6 +2,17 @@
 
   .controller('RequestController', function($scope, RequestFactory){
 
-    $scope.something = {};
+    /*
+      SCOPE VARIABLES
+    */
+
+      // Object - Bell Data
+      RequestFactory.getBellData()
+        .then(function(data){
+          $scope.bellData = data;
+        })
+        .catch(function(err){
+          console.log(err);
+        });
 
   });
