@@ -1,6 +1,6 @@
 angular.module('app.ChecklistFactory', [])
 
-  .factory('ChecklistFactory', function($http){
+  .factory('ChecklistFactory', function($http, $ionicListDelegate){
 
     /*
       VARIABLES
@@ -22,20 +22,14 @@ angular.module('app.ChecklistFactory', [])
       FUNCTIONS
     */
 
-      // Add a checklist item
-      var addItem = function(item) {
-        checklist.push(item);
-      }
+      var moveItem = function(item, fromIndex, toIndex) {
+        checklist.splice(fromIndex, 1);
+        checklist.splice(toIndex, 0, item);
+      };
 
-      // Remove a checklist item
-      var removeItem = function(item) {
-        checklist.push(item);
-      }
-
-      // Toggle a checklist item as completed or not completed
-      var toggleCheck = function() {
-
-      }
+      var onItemDelete = function(item) {
+        checklist.splice(checklist.indexOf(item), 1);
+      };
 
     /*
       RETURN
@@ -43,9 +37,8 @@ angular.module('app.ChecklistFactory', [])
 
       return {
         checklist: checklist,
-        addItem: addItem,
-        removeItem: removeItem,
-        toggleCheck: toggleCheck
+        moveItem: moveItem,
+        onItemDelete: onItemDelete
       }
 
   });

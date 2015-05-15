@@ -6,12 +6,12 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('app', [
   'ionic',
-  'app.controllers',
 
   // Factories
   'app.AgentFactory',
   'app.AuthFactory',
   'app.ChecklistFactory',
+  'app.LocationFactory',
   'app.ProposalFactory',
   'app.RequestFactory',
 
@@ -22,9 +22,13 @@ angular.module('app', [
   'app.LogoutController',
   'app.SignUpController',
   'app.ChecklistController',
+  'app.LocationController',
   'app.ProposalController',
   'app.ProposalsController',
   'app.RequestController',
+
+  // Directives
+  'app.LocationDirective',
 
   // Modules
   'ionic.contrib.ui.cards'

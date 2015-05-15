@@ -1,22 +1,34 @@
 <ion-view view-title="Agents">
   <ion-content>
 
-    <div class="list">
+    <header></header>
+
+    <div ng-controller="LocationController">
+        <h1 class="title">Ionic maps autocomplete</h1>
+        <div class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Location" location-suggestion location="location" ng-model="location.formatted_address">
+          </label>
+        </div>
+    </div>
+
+<!--     <div class="list">
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-  <i class="icon ion-search placeholder-icon"></i>
-  <input type="search" placeholder="Zip Code">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder="Zip Code">
         </label>
         <button class="button button-small">
           Submit
         </button>
       </div>
+
       <a class="item item-avatar" href="#/tab/agent/{{ agent.agent_id }}" ng-repeat="agent in agents">
         <img src="{{ agent.photo }}">
         <h2>{{ agent.name }}</h2>
         <p>{{ agent.brokerage }}</p>
       </a>
-    </div>
+    </div> -->
 
   </ion-content>
 </ion-view>

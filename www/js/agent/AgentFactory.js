@@ -2,13 +2,14 @@ angular.module('app.AgentFactory', [])
 
   .factory('AgentFactory', function($http){
 
+    console.log("AgentFactory started");
+
     /*
       HTTP FUNCTIONS
     */
 
       // Get a list of agents
       var getAgents = function() {
-        console.log('yo');
         return $http.get('http://localhost:8888/api/agents')
           .then(function(res){
             return res.data;
