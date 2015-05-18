@@ -10,7 +10,7 @@ describe('ProposalFactory', function(){
   }));
 
   it('can get an instance of my factory', function() {
-      expect(ProposalFactory).toBeDefined();
+      expect(ProposalFactory).toNotBeDefined();
   });
 
 });
