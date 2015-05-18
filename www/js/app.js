@@ -14,6 +14,7 @@ angular.module('app', [
   'app.LocationFactory',
   'app.ProposalFactory',
   'app.RequestFactory',
+  'app.SplashFactory',
 
   // Controllers
   'app.AgentsController',
@@ -27,6 +28,7 @@ angular.module('app', [
   'app.ProposalsController',
   'app.BellController',
   'app.RequestController',
+  'app.SplashController',
 
   // Directives
   'app.LocationDirective',
