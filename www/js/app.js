@@ -77,6 +77,16 @@ angular.module('app', [
     $stateProvider
 
     /*
+      SPLASH STATE
+      Splash is the default route and will be triggered when the user first opens the app
+    */
+    .state('splash', {
+      url: '/splash',
+      templateUrl: 'templates/splash.html',
+      controller: 'SplashController'
+    })
+
+    /*
       ABSTRACT STATE
       All states share this common parent which includes both tab navigation and
       right side menu navigation
@@ -261,7 +271,7 @@ angular.module('app', [
       FALLBACK STATE
       If the route does not match any listed above, users redirected to this route
     */
-    $urlRouterProvider.otherwise('/tab/home');
+    $urlRouterProvider.otherwise('/splash');
 
 
 
