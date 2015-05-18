@@ -6,11 +6,11 @@ describe('ProposalFactory', function(){
   });
 
   beforeEach(inject(function (_ProposalFactory_) {
-      ProposalFactory = _ProposalFactory_;
+    ProposalFactory = _ProposalFactory_;
   }));
 
   it('can get an instance of my factory', function() {
-      expect(ProposalFactory).toNotBeDefined();
+    expect(ProposalFactory).toBeDefined();
   });
 
 });

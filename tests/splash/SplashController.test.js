@@ -10,8 +10,8 @@ describe('SplashController', function () {
     scope = $rootScope.$new();
     state = _$state_;
     controller = $controller('SplashController', {
-        '$scope': scope,
-        '$state': state
+      '$scope': scope,
+      '$state': state
     });
   }));
 

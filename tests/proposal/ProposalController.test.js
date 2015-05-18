@@ -11,7 +11,7 @@ describe('ProposalController', function () {
     scope = $rootScope.$new();
     ProposalFactory = _ProposalFactory_;
     controller = $controller('ProposalController', {
-        '$scope': scope
+      '$scope': scope
     });
   }));
 

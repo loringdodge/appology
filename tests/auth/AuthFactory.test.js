@@ -6,11 +6,11 @@ describe('AuthFactory', function(){
   });
 
   beforeEach(inject(function (_AuthFactory_) {
-      AuthFactory = _AuthFactory_;
+    AuthFactory = _AuthFactory_;
   }));
 
   it('can get an instance of my factory', function() {
-      expect(AuthFactory).toBeDefined();
+    expect(AuthFactory).toBeDefined();
   });
 
 });

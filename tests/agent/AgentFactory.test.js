@@ -6,11 +6,11 @@ describe('AgentFactory', function(){
   });
 
   beforeEach(inject(function (_AgentFactory_) {
-      AgentFactory = _AgentFactory_;
+    AgentFactory = _AgentFactory_;
   }));
 
   it('can get an instance of my factory', function() {
-      expect(AgentFactory).toBeDefined();
+    expect(AgentFactory).toBeDefined();
   });
 
 });
