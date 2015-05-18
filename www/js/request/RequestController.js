@@ -6,13 +6,13 @@
       SCOPE VARIABLES
     */
 
-      // Object - Bell Data
-      RequestFactory.getBellData()
-        .then(function(data){
-          $scope.bellData = data;
-        })
-        .catch(function(err){
-          console.log(err);
-        });
+      $scope.submitRequest = function(request){
+        console.log(request.address);
+        if (request.$valid) {
+          console.log("valid");
+        } else {
+          console.log("not valid");
+        }
+      }
 
   });

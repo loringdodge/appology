@@ -31,6 +31,7 @@
       // Function - Toggle delete buttons
       var deleteButtonBool = false;
       $scope.showDeleteButtons = function() {
+        if(reorderButtonBool) $scope.showReorderButtons();
         deleteButtonBool = !deleteButtonBool;
         $ionicListDelegate.showDelete(deleteButtonBool);
       };
@@ -38,6 +39,7 @@
       // Function - Toggle reorder buttons
       var reorderButtonBool = false;
       $scope.showReorderButtons = function() {
+        if(deleteButtonBool) $scope.showDeleteButtons();
         reorderButtonBool = !reorderButtonBool;
         $ionicListDelegate.showReorder(reorderButtonBool);
       };
@@ -52,6 +54,8 @@
 
       // Function - Open Modal
       $scope.openModal = function() {
+        if(reorderButtonBool) $scope.showReorderButtons();
+        if(deleteButtonBool) $scope.showDeleteButtons();
         $scope.modal.show();
       };
 
@@ -67,12 +71,12 @@
 
       // Listen - Action on modal hidden
       $scope.$on('modal.hidden', function() {
-        // Execute action
+        $scope.item = {};
       });
 
       // Listen - Action on modal remove
       $scope.$on('modal.removed', function() {
-        // Execute action
+        $scope.item = {};
       });
 
     });

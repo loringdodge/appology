@@ -25,6 +25,7 @@ angular.module('app', [
   'app.LocationController',
   'app.ProposalController',
   'app.ProposalsController',
+  'app.BellController',
   'app.RequestController',
 
   // Directives
@@ -107,7 +108,7 @@ angular.module('app', [
       views: {
         'tab-request': {
           templateUrl: 'templates/tab-request.html',
-          controller: 'RequestController'
+          controller: 'BellController'
         }
       }
     })
