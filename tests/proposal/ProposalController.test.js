@@ -1,5 +1,5 @@
 describe('ProposalController', function () {
-  var ctrl, scope, ProposalFactory;
+  var ctrl, scope, ProposalsFactory;
 
   beforeEach(function () {
     module('ui.router');

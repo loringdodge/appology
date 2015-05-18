@@ -18,6 +18,7 @@ module.exports = function(config) {
       '../www/lib/ionic/js/ionic.bundle.js',
       '../www/lib/angular/angular.js',
       '../www/lib/angular-ui-router/release/angular-ui-router.js',
+      '../www/lib/ionic/js/ionic.swipecards.js',
       '../www/js/**/*.js',
       '../www/lib/angular-mocks/angular-mocks.js',
       '**/*test.js'
