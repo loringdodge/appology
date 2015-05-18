@@ -14,7 +14,6 @@ angular.module('app', [
   'app.LocationFactory',
   'app.ProposalFactory',
   'app.RequestFactory',
-  'app.SplashFactory',
 
   // Controllers
   'app.AgentsController',

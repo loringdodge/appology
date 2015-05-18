@@ -2,8 +2,9 @@ describe('ProposalController', function () {
   var ctrl, scope, ProposalFactory;
 
   beforeEach(function () {
-      module('app.ProposalController');
-      module('app.ProposalFactory');
+    module('ui.router');
+    module('app.ProposalController');
+    module('app.ProposalFactory');
   });
 
   beforeEach(inject(function ($rootScope, $controller, _ProposalFactory_) {

@@ -1,15 +1,16 @@
-describe('AuthController', function () {
+describe('LoginController', function () {
   var ctrl, scope, AuthFactory;
 
   beforeEach(function () {
-      module('app.AuthController');
-      module('app.AuthFactory');
+    module('ionic');
+    module('app.LoginController');
+    module('app.AuthFactory');
   });
 
   beforeEach(inject(function ($rootScope, $controller, _AuthFactory_) {
     scope = $rootScope.$new();
     AuthFactory = _AuthFactory_;
-    controller = $controller('AuthController', {
+    controller = $controller('LoginController', {
         '$scope': scope
     });
   }));

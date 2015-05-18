@@ -2,6 +2,7 @@ describe('ChecklistController', function () {
   var ctrl, scope, ChecklistFactory;
 
   beforeEach(function () {
+      module('ionic');
       module('app.ChecklistController');
       module('app.ChecklistFactory');
   });
