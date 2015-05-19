@@ -7,7 +7,7 @@
     */
 
       // Array - list of checklist items
-      $scope.checklist = ChecklistFactory.checklist;
+      $scope.checklist = ChecklistFactory.getChecklist();
 
       // Object - ngModel for addItem input (modal)
       $scope.item = {};

@@ -33,6 +33,7 @@ angular.module('app', [
   'app.LocationDirective',
 
   // Modules
+  'ionic.utils',
   'ionic.contrib.ui.cards'
 ])
 
