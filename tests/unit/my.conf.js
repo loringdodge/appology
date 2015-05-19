@@ -4,6 +4,9 @@
 module.exports = function(config) {
   config.set({
 
+    // see console.log messages
+    captureConsole: true,
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -15,12 +18,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '../www/lib/ionic/js/ionic.bundle.js',
-      '../www/lib/angular/angular.js',
-      '../www/lib/angular-ui-router/release/angular-ui-router.js',
-      '../www/lib/ionic/js/ionic.swipecards.js',
-      '../www/js/**/*.js',
-      '../www/lib/angular-mocks/angular-mocks.js',
+      '../../www/lib/ionic/js/ionic.bundle.js',
+      '../../www/lib/angular/angular.js',
+      '../../www/lib/angular-ui-router/release/angular-ui-router.js',
+      '../../www/lib/ionic/js/ionic.swipecards.js',
+      '../../www/js/**/*.js',
+      '../../www/lib/angular-mocks/angular-mocks.js',
       '**/*test.js'
     ],
 

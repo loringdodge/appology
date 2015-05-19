@@ -34,7 +34,7 @@ gulp.task('watch', function() {
 
 gulp.task('test', function(done) {
   karma.start({
-    configFile: __dirname + '/tests/my.conf.js',
+    configFile: __dirname + '/tests/unit/my.conf.js',
     singleRun: true
   }, function() {
     done();

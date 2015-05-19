@@ -3,6 +3,7 @@ describe('ChecklistController', function () {
 
   beforeEach(function () {
     module('ionic');
+    module('ionic.utils');
     module('app.ChecklistController');
     module('app.ChecklistFactory');
   });
@@ -15,7 +16,7 @@ describe('ChecklistController', function () {
     });
   }));
 
-  it('dependencies', function () {
+  it('should have ChecklistFactory as a dependency', function () {
     expect(ChecklistFactory).toBeDefined();
   });
 
