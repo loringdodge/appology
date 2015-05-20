@@ -2,8 +2,6 @@ angular.module('app.AgentFactory', [])
 
   .factory('AgentFactory', function($http){
 
-    console.log("AgentFactory started");
-
     /*
       HTTP FUNCTIONS
     */
