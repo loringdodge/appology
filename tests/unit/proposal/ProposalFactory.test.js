@@ -145,7 +145,7 @@ describe('ProposalFactory', function(){
     var userId = 1;
     var proposals;
 
-    // Call getAgents()
+    // Call getProposals()
     ProposalFactory.getProposals(userId)
       .then(function(res){
         proposals = res;
@@ -165,7 +165,7 @@ describe('ProposalFactory', function(){
 
   it('should throw error for get proposals from server: getProposals()', function() {
 
-    // Spy on console.log from getAgents()
+    // Spy on console.log from getProposals()
     spyOn(console, 'log');
 
     var userId = 1;
@@ -173,7 +173,7 @@ describe('ProposalFactory', function(){
     // Create expectation and respond 500
     $httpBackend.expectGET('http://localhost:8888/api/proposals/' + userId).respond(500);
 
-    // Call getAgents()
+    // Call getProposals()
     ProposalFactory.getProposals(userId)
 
     // Flush response - must be placed before expect()
@@ -192,7 +192,7 @@ describe('ProposalFactory', function(){
     var proposalId = 1;
     var proposal;
 
-    // Call getAgents()
+    // Call getProposals()
     ProposalFactory.getProposal(proposalId)
       .then(function(res){
         proposal = res;
@@ -212,7 +212,7 @@ describe('ProposalFactory', function(){
 
   it('should throw error for a single proposal from server: getProposal()', function() {
 
-    // Spy on console.log from getAgents()
+    // Spy on console.log from getProposals()
     spyOn(console, 'log');
 
     var proposalId = 1;
@@ -220,7 +220,7 @@ describe('ProposalFactory', function(){
     // Create expectation and respond 500
     $httpBackend.expectGET('http://localhost:8888/api/proposal/' + proposalId).respond(500);
 
-    // Call getAgents()
+    // Call getProposals()
     ProposalFactory.getProposal(proposalId)
 
     // Flush response - must be placed before expect()

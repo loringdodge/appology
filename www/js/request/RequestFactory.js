@@ -18,10 +18,8 @@ angular.module('app.RequestFactory', [])
 
       // Post a new request
       var postRequest = function(data) {
-        console.log("postRequest: before", data);
         return $http.post('http://localhost:8888/api/request', data)
           .then(function(res){
-            console.log("postRequest: success", res.data);
             return res.data;
           })
           .catch(function(err){
