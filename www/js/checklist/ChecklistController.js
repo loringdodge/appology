@@ -53,7 +53,7 @@
       });
 
       // Function - Open Modal
-      $scope.openModal = function() {
+      $scope.openModal = function(reorderButtonBool, deleteButtonBool) {
         if(reorderButtonBool) $scope.showReorderButtons();
         if(deleteButtonBool) $scope.showDeleteButtons();
         $scope.modal.show();
