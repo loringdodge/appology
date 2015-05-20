@@ -23,7 +23,7 @@ angular.module('app.ProposalFactory', [])
           .then(function(res) {
             return res.data;
           })
-          .catch(function(res){
+          .catch(function(err){
             console.log(err);
           })
       }
