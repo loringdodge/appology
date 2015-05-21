@@ -6,6 +6,8 @@
       SCOPE VARIABLES
     */
 
+      $scope.bellData = {};
+
       // Object - Bell Data
       RequestFactory.getBellData()
         .then(function(data){
