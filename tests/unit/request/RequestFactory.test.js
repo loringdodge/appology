@@ -9,6 +9,10 @@ describe('RequestFactory', function(){
     RequestFactory = _RequestFactory_;
     $httpBackend = _$httpBackend_;
 
+    // Requires in order to capture request for the html template
+    $httpBackend = _$httpBackend_;
+    $httpBackend.whenGET('templates/request-submit.html').respond(200, '');
+
     // Backend definitions
     $httpBackend.when('GET', 'http://localhost:8888/api/bell')
       .respond({
