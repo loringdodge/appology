@@ -30,7 +30,7 @@
 
       // Function - Toggle delete buttons
       var deleteButtonBool = false;
-      $scope.showDeleteButtons = function() {
+      $scope.showDeleteButtons = function(reorderButtonBool, deleteButtonBool) {
         if(reorderButtonBool) $scope.showReorderButtons();
         deleteButtonBool = !deleteButtonBool;
         $ionicListDelegate.showDelete(deleteButtonBool);
@@ -38,7 +38,7 @@
 
       // Function - Toggle reorder buttons
       var reorderButtonBool = false;
-      $scope.showReorderButtons = function() {
+      $scope.showReorderButtons = function(reorderButtonBool, deleteButtonBool) {
         if(deleteButtonBool) $scope.showDeleteButtons();
         reorderButtonBool = !reorderButtonBool;
         $ionicListDelegate.showReorder(reorderButtonBool);

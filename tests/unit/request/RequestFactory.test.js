@@ -9,6 +9,7 @@ describe('RequestFactory', function(){
     RequestFactory = _RequestFactory_;
     $httpBackend = _$httpBackend_;
 
+    // Backend definitions
     $httpBackend.when('GET', 'http://localhost:8888/api/bell')
       .respond({
           "nationalAverage": 5.7,
@@ -22,7 +23,9 @@ describe('RequestFactory', function(){
   }));
 
   afterEach(function() {
+    // Verifies all requests are defined via expect
     $httpBackend.verifyNoOutstandingExpectation();
+    // Verifies that there are no requests that need to be flushed
     $httpBackend.verifyNoOutstandingRequest();
   });
 

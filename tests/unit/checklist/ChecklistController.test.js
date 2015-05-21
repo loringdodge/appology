@@ -29,7 +29,7 @@ describe('ChecklistController', function () {
               name: 'Sell house'
           }];
 
-        // Create mockChecklist Factory
+        // Create mockChecklistFactory
         mockChecklistFactory = {
           getChecklist: function() {
             return checklist;
@@ -44,7 +44,7 @@ describe('ChecklistController', function () {
           addItem: function(item) {
             checklist.push(item);
           }
-        }
+        };
 
         // Register the mockChecklistFactory with the $injector
         $provide.value("ChecklistFactory", mockChecklistFactory);
@@ -239,6 +239,46 @@ describe('ChecklistController', function () {
     expect(scope.modal.hide).toHaveBeenCalled();
   });
 
+  it('should toggle the delete buttons: $scope.showDeleteButtons()', function () {
+
+    scope.showDeleteButtons();
+
+    expect(ionicListDelegate.showDelete).toHaveBeenCalled();
+  });
+
+  it('should hide the reorder buttons when delete buttons are toggled : $scope.showDeleteButtons()', function () {
+
+    spyOn(scope, 'showReorderButtons');
+
+    var reorderButtonBool = true;
+    var deleteButtonBool = false;
+
+    scope.showDeleteButtons(reorderButtonBool, deleteButtonBool);
+
+    expect(scope.showReorderButtons).toHaveBeenCalled();
+    expect(ionicListDelegate.showDelete).toHaveBeenCalled();
+  });
+
+  it('should toggle the reorder buttons: $scope.showReorderButtons()', function () {
+
+    scope.showReorderButtons();
+
+    expect(ionicListDelegate.showReorder).toHaveBeenCalled();
+  });
+
+  it('should hide the delete buttons when reorder buttons are toggled : $scope.showReorderButtons()', function () {
+
+    spyOn(scope, 'showDeleteButtons');
+
+    var reorderButtonBool = false;
+    var deleteButtonBool = true;
+
+    scope.showReorderButtons(reorderButtonBool, deleteButtonBool);
+
+    expect(scope.showDeleteButtons).toHaveBeenCalled();
+    expect(ionicListDelegate.showReorder).toHaveBeenCalled();
+  });
+
   it('should open modal: $scope.openModal()', function () {
 
     scope.openModal();
@@ -279,6 +319,28 @@ describe('ChecklistController', function () {
     scope.$destroy();
 
     expect(scope.modal.remove).toHaveBeenCalled();
+  });
+
+  it('should set input to empty object when modal is hidden: $scope.$on("modal.hidden", function ...', function () {
+
+    scope.item = {
+      name: 'Do something'
+    };
+
+    scope.$broadcast('modal.hidden');
+
+    expect(scope.item).toEqual({});
+  });
+
+  it('should set input to empty object when modal is removed: $scope.$on("modal.removed", function ...', function () {
+
+    scope.item = {
+      name: 'Do something'
+    };
+
+    scope.$broadcast('modal.removed');
+
+    expect(scope.item).toEqual({});
   });
 
 });
