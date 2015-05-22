@@ -1,5 +1,5 @@
 describe('BellController', function () {
-  var deferred, ctrl, scope, RequestFactory, $httpBackend, bellDataDeferred;
+  var ctrl, scope, RequestFactory, $httpBackend, bellDataDeferred;
 
   beforeEach(function () {
     module('app.BellController');

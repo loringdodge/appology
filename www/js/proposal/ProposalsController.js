@@ -10,6 +10,9 @@
       SCOPE FUNCTIONS
     */
 
+      // Add a card to the deck - function body added after ProposalFactory proposal receives
+      $scope.addCard = function() {};
+
       // Adds a specified card to the deck
       $scope.cardSwiped = function(index) {
         $scope.addCard();
