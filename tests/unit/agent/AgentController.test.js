@@ -17,7 +17,7 @@ describe('AgentController', function () {
     });
   }));
 
-  it('dependencies', function () {
+  it('should have AgentFactory defined', function () {
     expect(AgentFactory).toBeDefined();
   });
 
