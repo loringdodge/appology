@@ -2,8 +2,6 @@
 
   .controller('AgentController', function($scope, $stateParams, AgentFactory){
 
-    console.log("AgentController started");
-
     /*
       SCOPE VARIABLES
     */

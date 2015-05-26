@@ -6,7 +6,7 @@ exports.config = {
   },
   specs: [
     // We are going to make this file in a minute
-    'e2e/becomeAwesome.spec.js'
+    'becomeAwesome.spec.js'
   ],
   jasmineNodeOpts: {
     showColors: true,
@@ -14,7 +14,7 @@ exports.config = {
     isVerbose: true,
   },
   allScriptsTimeout: 20000,
-    onPrepare: function(){
-      browser.driver.get('http://localhost:3000');
-  }
+onPrepare: function(){
+                browser.driver.get('http://localhost:3000');
+        }
 };
