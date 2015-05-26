@@ -1,0 +1,26 @@
+// List-Custom
+// -------------------------------
+
+.item-checkbox-custom {
+  padding-left: 0px; }
+
+.item-checkbox-custom.active {
+  box-shadow: none; }
+
+.item-checkbox-custom .checkbox {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  left: 8px;
+  z-index: 3;
+  margin-top: -21px; }
+
+.item-checkbox-custom .text {
+  margin-left: 45px; }
+
+.item-checkbox-custom.item-checkbox-right {
+  padding-right: 60px;
+  padding-left: 16px; }
+
+.item-checkbox-right .checkbox input, .item-checkbox-right .checkbox-icon {
+  float: right; }

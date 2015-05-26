@@ -46,7 +46,7 @@ gulp.task('sass', function(done) {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', function(){
-      gulp.run('ion');
+      // gulp.run('ion');
       done();
     });
 });
