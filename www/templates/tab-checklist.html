@@ -1,21 +1,27 @@
 <ion-view view-title="Checklist">
   <ion-content>
 
-    <div class="list">
-      <div class="item item-input-inset">
-        <div class="button-bar padding">
-          <a class="button" ng-click="openModal()">Add</a>
+    <div class="list background-red">
+      <div class="row">
+        <div class="col center">
+          <a class="button button-white button-circle" ng-click="openModal()"><i class="icon ion-plus-circled"></i></a>
         </div>
-        <div class="button-bar padding">
-          <a class="button" ng-click="showDeleteButtons()">Remove</a>
+        <div class="col center">
+          <a class="button button-white button-circle" ng-click="showDeleteButtons()"><i class="icon ion-trash-a"></i></a>
         </div>
-        <div class="button-bar padding">
-          <a class="button" ng-click="showReorderButtons()">Reorder</a>
+        <div class="col center">
+          <a class="button button-white button-circle" ng-click="showReorderButtons()"><i class="icon ion-shuffle"></i></a>
         </div>
       </div>
 
-      <ion-list>
-        <ion-item class="item-checkbox-custom item-remove-animate" ng-repeat="item in checklist">
+      <div class="row background-mediumred">
+        <div class="col text-center text-white">
+          Here's your seller checklist!
+        </div>
+      </div>
+
+      <ion-list class="background-white">
+        <ion-item class="item-checkbox-custom item-remove-animate checkbox-red" ng-repeat="item in checklist">
           <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
           <label class="checkbox">
             <input type="checkbox">

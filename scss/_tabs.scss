@@ -1,0 +1,11 @@
+// Tabs
+// -------------------------------
+
+.tabs-grey > .tabs,
+.tabs.tabs-grey {
+  background-color: $upnest-grey !important;
+}
+
+ion-tabs {
+  @include tabs-standard-color('tabs-color-active-grey', $white, $medium-red);
+}

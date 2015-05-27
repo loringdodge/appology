@@ -1,0 +1,6 @@
+// Bar
+// -------------------------------
+
+.bar.bar-grey {
+  @include bar-style($upnest-grey, $upnest-grey, $white);
+}

@@ -1,0 +1,12 @@
+// Buttons
+// -------------------------------
+
+.button-white {
+  color: $red;
+  background-color: $white;
+  border: none;
+}
+
+.button-circle {
+  @include border-radius(50%);
+}
