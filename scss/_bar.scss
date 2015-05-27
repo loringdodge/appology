@@ -4,3 +4,7 @@
 .bar.bar-grey {
   @include bar-style($upnest-grey, $upnest-grey, $white);
 }
+
+.bar.bar-red {
+  @include bar-style($red, $red, $white);
+}

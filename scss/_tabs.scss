@@ -7,5 +7,5 @@
 }
 
 ion-tabs {
-  @include tabs-standard-color('tabs-color-active-grey', $white, $medium-red);
+  @include tabs-standard-color('tabs-color-active-grey', $white, $light-red);
 }
