@@ -6,6 +6,7 @@
 }
 
 .commission-content {
+  position: relative;
   height: 50% !important;
 }
 
@@ -27,8 +28,34 @@
   display: block;
 }
 
-.commission-animate-up {
+.commission-bar-animate-up {
   @include transition(height 0.7s ease-out);
+}
+
+.commission-curve {
+  position: absolute;
+  bottom: 10px;
+  left: -5%;
+  width: 110%;
+  z-index: 2;
+}
+
+.commission-dot {
+  position: absolute;
+  bottom: 150px;
+  left: 110px;
+  width: 30px;
+  height: 30px;
+  background-color: $red;
+  border-radius: 50%;
+  z-index: 3;
+  @include transform(scale(0));
+  @include box-shadow(2px 2px 5px $dark-blue);
+}
+
+.commission-dot-animate-wide {
+  @include transform(scale(1));
+  @include transition(all 0.2s ease-out);
 }
 
 .request-middle { }

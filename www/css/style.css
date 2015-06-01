@@ -244,7 +244,8 @@ ion-tabs.tabs-color-active-white .tab-item {
   font-size: 20px; }
 
 .splash-bottom p {
-  padding: auto 50px;
+  margin: 0 auto;
+  width: 70%;
   font-size: 16px; }
 
 .slider {
@@ -279,6 +280,7 @@ ion-tabs.tabs-color-active-white .tab-item {
   height: 100% !important; }
 
 .commission-content {
+  position: relative;
   height: 50% !important; }
 
 .commission-flex {
@@ -323,9 +325,36 @@ ion-tabs.tabs-color-active-white .tab-item {
   background-color: #7DBFE3;
   display: block; }
 
-.commission-animate-up {
+.commission-bar-animate-up {
   -webkit-transition: height 0.7s ease-out;
   transition: height 0.7s ease-out; }
+
+.commission-curve {
+  position: absolute;
+  bottom: 10px;
+  left: -5%;
+  width: 110%;
+  z-index: 2; }
+
+.commission-dot {
+  position: absolute;
+  bottom: 150px;
+  left: 110px;
+  width: 30px;
+  height: 30px;
+  background-color: #DE574E;
+  border-radius: 50%;
+  z-index: 3;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-box-shadow: 2px 2px 5px #1674A7;
+  box-shadow: 2px 2px 5px #1674A7; }
+
+.commission-dot-animate-wide {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
 
 .request-middle .col {
   margin: 20px 5px;
