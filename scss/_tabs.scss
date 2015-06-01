@@ -1,11 +1,14 @@
 // Tabs
 // -------------------------------
 
-.tabs-grey > .tabs,
-.tabs.tabs-grey {
-  background-color: $upnest-grey !important;
+.tabs,
+.tabs-white > .tabs,
+.tabs.tabs-white {
+  background-color: $white;
+  border-top: 0px solid black !important;
+  background-image: none !important;
 }
 
 ion-tabs {
-  @include tabs-standard-color('tabs-color-active-grey', $white, $light-red);
+  @include tabs-standard-color('tabs-color-active-white', $red, $upnest-grey);
 }

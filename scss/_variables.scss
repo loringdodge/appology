@@ -7,9 +7,13 @@ $upnest-red:                            #c1181f !default;
 $red:                                   #DE574E !default;
 $medium-red:                            #DEAFAB !default;
 $light-red:                             #DED0D1 !default;
-$green:                                 #88B25B !default;
-$blue:                                  #55A6D1 !default;
 
+$green:                                 #88B25B !default;
+
+$blue:                                  #55A6D1 !default;
+$light-blue:                            #7DBFE3 !default;
+
+$grey-CCC:                              #CCC !default;
 $light-grey:                            #F7F7F7 !default;
 $black:                                 #000 !default;
 $white:                                 #FFF !important;
@@ -23,4 +27,4 @@ $font-size-medium:                      16px !default;
 // Shadows
 // -------------------------------
 
-$shadow-top:                            0px -2px 10px black;
+$shadow-top:                            0px -2px 2px black;

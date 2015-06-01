@@ -4,9 +4,12 @@
 .button-white {
   color: $red;
   background-color: $white;
-  border: none;
-}
+  border: none; }
+
+.button-red {
+  color: $white;
+  background-color: $red;
+  border: none; }
 
 .button-circle {
-  @include border-radius(50%);
-}
+  @include border-radius(50%); }

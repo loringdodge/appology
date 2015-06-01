@@ -1,20 +1,36 @@
-<ion-view view-title="Request Comissions">
-  <ion-content>
+<ion-view view-title="Compare Realtor Quotes">
+  <ion-content class="commission">
 
-    <div class="item item-body">
-      <h2>Commissions Savings</h2>
+    <div commission-directive></div>
+
+    <div class="row request-middle">
+      <div class="col">
+        <span class="text-bold text-size-12">Juniors</span> </br>
+        4.2%
+      </div>
+      <div class="col">
+        <span class="text-bold text-size-12">UpNest</span> </br>
+        {{ bellData.upnestAverage }}
+      </div>
+      <div class="col">
+        <span class="text-bold text-size-12">US Avg</span> </br>
+        {{ bellData.nationalAverage }}
+      </div>
+      <div class="col">
+        <span class="text-bold text-size-12">Standard</span> </br>
+        6.0%
+      </div>
     </div>
-    <img class="full-image" src="img/commissions-banner.png">
 
-    <div class="row request-box">
-      <div class="col">JR. Agents 4.2%</div>
-      <div class="col">UpNest Avg. {{ bellData.upnestAverage }}</div>
-      <div class="col">U.S. Avg. {{ bellData.nationalAverage }}</div>
-      <div class="col">Standard 6.0%</div>
-    </div>
-
-    <div class="button-bar padding">
-      <a class="button button-positive" href="#/tab/request/submit">Submit</a>
+    <div class="row request-bottom">
+      <div class="col">
+        <h2>
+          Help Me Find The Best Agent
+        </h2>
+        <a class="button button-full button-red border-radius-5" href="#/tab/request/submit">
+          Get Started
+        </a>
+      </div>
     </div>
 
   </ion-content>

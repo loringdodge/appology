@@ -1,10 +1,8 @@
 // Bar
 // -------------------------------
 
-.bar.bar-grey {
-  @include bar-style($upnest-grey, $upnest-grey, $white);
-}
+.bar.bar-white {
+  @include bar-style($white, $white, $upnest-red); }
 
 .bar.bar-red {
-  @include bar-style($red, $red, $white);
-}
+  @include bar-style($red, $red, $white); }

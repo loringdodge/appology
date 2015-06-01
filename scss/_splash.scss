@@ -1,17 +1,25 @@
 // Splash
 // -------------------------------
 
-
 // Custom
 .splash-top {
+  position: relative;
   height: 65%;
+  z-index: 1;
+}
+
+.splash-top .background {
+  margin: 15% auto 0 auto;
+  width: 80%;
 }
 
 .splash-bottom {
-  @include box-shadow($shadow-top);
+  position: relative;
+  // @include box-shadow($shadow-top);
   padding-top: 0%;
   color: $white;
   height: 37%;
+  z-index: 2;
 }
 
 .splash-bottom h2 {

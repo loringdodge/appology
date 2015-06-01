@@ -4,5 +4,4 @@
 $checkbox-red:                                   #DE574E !important;
 
 .checkbox-red  {
-  @include checkbox-style($light-grey, $checkbox-red, $light-grey);
-}
+  @include checkbox-style($light-grey, $checkbox-red, $light-grey); }

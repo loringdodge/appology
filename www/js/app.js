@@ -31,6 +31,7 @@ angular.module('app', [
 
   // Directives
   'app.LocationDirective',
+  'app.CommissionDirective',
 
   // Modules
   'ionic.utils',
@@ -51,18 +52,18 @@ angular.module('app', [
   });
 })
 
-.directive('noScroll', function($document) {
+// .directive('noScroll', function($document) {
 
-  return {
-    restrict: 'A',
-    link: function($scope, $element, $attr) {
+//   return {
+//     restrict: 'A',
+//     link: function($scope, $element, $attr) {
 
-      $document.on('touchmove', function(e) {
-        e.preventDefault();
-      });
-    }
-  }
-})
+//       $document.on('touchmove', function(e) {
+//         e.preventDefault();
+//       });
+//     }
+//   }
+// })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 

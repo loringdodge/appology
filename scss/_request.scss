@@ -1,8 +1,56 @@
 // Request
 // -------------------------------
 
-.request-box .col {
-  margin: 5px;
+.commission .scroll {
+  height: 100% !important
+}
+
+.commission-content {
+  height: 50% !important;
+}
+
+.commission-flex {
+  height: 100%;
+  padding: 0 7px 0 0;
+  @include display-flex;
+  @include flex-direction($value: row);
+  @include flex-wrap($value: no-wrap);
+  @include align-items($value: flex-end);
+  @include justify-content($value: space-around);
+}
+
+.commission-bar {
+  @include flex($fg: 1, $fs: null, $fb: null);
+  margin-left: 7px;
+  height: 0;
+  background-color: $light-blue;
+  display: block;
+}
+
+.commission-animate-up {
+  @include transition(height 0.7s ease-out);
+}
+
+.request-middle { }
+
+.request-middle .col {
+  margin: 20px 5px;
+  padding: 5px;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 5px; }
+  color: $blue;
+  line-height: 150%;
+  border: 1px solid $blue;
+  background-color: $white;
+  @include border-radius(5px); }
+
+.request-bottom {
+  height: 25%;
+  margin-top: 20px;
+  border-top: 1px solid $grey-CCC; }
+
+.request-bottom .col {
+  padding-top: 20px; }
+
+.request-bottom .col h2 {
+  font-size: 18px;
+  text-align: center; }
