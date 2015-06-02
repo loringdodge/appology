@@ -8,5 +8,6 @@
 
       $scope.item = $stateParams.item;
 
+      $scope.checkItem = ChecklistFactory.checkItem;
 
     });

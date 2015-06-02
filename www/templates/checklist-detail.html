@@ -1,9 +1,16 @@
 <ion-view view-title="Checklist View">
   <ion-content>
-    <ion-list>
-      <ion-item>
-        Checklist View
-      </ion-item>
-    </ion-list>
+
+    <div class="list padding-horizontal-20">
+
+      <h4 class="padding-vertical">{{ item.name }}</h4>
+      <p>Make up a list of phone numbers in advance of each your utility companies. Not every utility is always paid monthly. If you subscribe to the newspaper, you might have to order your cancellation a week or more in advance to stop newspapers from piling up in the front yard.</p>
+
+      <button ng-click="checkItem(item)" class="button button-outline button-assertive button-small">
+        {{ (item.checked) ? "Completed" : "Mark as done" }}
+      </button>
+
+    </div>
+
   </ion-content>
 </ion-view>

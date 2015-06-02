@@ -129,8 +129,8 @@ angular.module('app.ChecklistFactory', [])
       }
 
       // Get checklist
-      var getChecklistItem = function(id) {
-        return checklist[id];
+      var checkItem = function(item) {
+        item.checked = !item.checked;
       }
 
       // Move item to a different index of array
@@ -155,6 +155,7 @@ angular.module('app.ChecklistFactory', [])
 
       return {
         getChecklist: getChecklist,
+        checkItem: checkItem,
         moveItem: moveItem,
         onItemDelete: onItemDelete,
         addItem: addItem
