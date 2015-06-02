@@ -1,0 +1,121 @@
+// Checklist
+// -------------------------------
+
+// Red Checklist
+.checklist-section-red {
+  background-color: $light-red;
+
+  .checklist-title {
+    border-width: 0px;
+    color: $white;
+    font-weight: bold;
+    background-color: $red;
+  }
+
+  .checklist-item {
+    border-color: $red;
+  }
+
+  .checklist-item .item-content {
+    color: $white;
+    background-color: $medium-red;
+
+    .checkbox  {
+      @include checkbox-style($medium-red, $red, $medium-red);
+    }
+
+    .checkbox input:before {
+      background-color: $light-red;
+    }
+  }
+}
+
+// Blue Checklist
+.checklist-section-blue {
+  background-color: $light-blue;
+
+  .checklist-title {
+    border-width: 0px;
+    color: $white;
+    font-weight: bold;
+    background-color: $blue;
+  }
+
+  .checklist-item {
+    border-color: $blue;
+  }
+
+  .checklist-item .item-content {
+    color: $white;
+    background-color: $medium-blue;
+
+    .checkbox  {
+      @include checkbox-style($medium-blue, $blue, $medium-blue);
+    }
+
+    .checkbox input:before {
+      background-color: $light-blue;
+    }
+  }
+
+}
+
+
+// Green Checklist
+.checklist-section-green {
+  background-color: $light-green !important;
+
+  .checklist-title {
+    border-width: 0px;
+    color: $white;
+    font-weight: bold;
+    background-color: $green !important;
+  }
+
+  .checklist-item {
+    border-color: $green;
+  }
+
+  .checklist-item .item-content {
+    color: $white;
+    background-color: $medium-green;
+
+    .checkbox  {
+      @include checkbox-style($medium-green, $green, $medium-green);
+    }
+
+    .checkbox input:before {
+      background-color: $light-green;
+    }
+  }
+
+}
+
+// Yellow Checklist
+.checklist-section-yellow {
+  background-color: $light-yellow !important;
+
+  .checklist-title {
+    border-width: 0px;
+    color: $white;
+    font-weight: bold;
+    background-color: $yellow !important;
+  }
+
+  .checklist-item {
+    border-color: $yellow;
+  }
+
+  .checklist-item .item-content {
+    color: $white;
+    background-color: $medium-yellow;
+
+    .checkbox  {
+      @include checkbox-style($medium-yellow, $yellow, $medium-yellow);
+    }
+
+    .checkbox input:before {
+      background-color: $light-yellow;
+    }
+  }
+}

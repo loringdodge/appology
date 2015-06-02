@@ -64,10 +64,10 @@
   margin: 20px 5px;
   padding: 5px;
   text-align: center;
-  color: $blue;
+  color: $white;
   line-height: 150%;
   border: 1px solid $blue;
-  background-color: $white;
+  background-color: $blue;
   @include border-radius(5px); }
 
 .request-bottom {

@@ -2,14 +2,15 @@
 // -------------------------------
 
 .checklist-buttons button {
-  background-color: $white; }
+  // background-color: $white;
+}
 
 .item-checkbox-custom {
-  background-color: white !important;
   padding-left: 0px; }
 
 .item-checkbox-custom .item-content {
-  background-color: $white !important; }
+
+}
 
 .item-checkbox-custom.active {
   box-shadow: none; }
@@ -22,8 +23,7 @@
   z-index: 3;
   margin-top: -21px; }
 
-.item-checkbox-custom .checkbox input:before {
-  background-color: $light-red }
+.item-checkbox-custom .checkbox input:before { }
 
 .item-checkbox-custom .text {
   margin-left: 45px; }

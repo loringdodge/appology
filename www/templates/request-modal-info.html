@@ -1,0 +1,19 @@
+<ion-modal-view class="ion-modal-custom">
+  <div class="ion-modal-content-custom border-radius-5">
+    <ion-header-bar class="bar bar-header bar-positive border-radius-top-5">
+      <h1 class="title">Add An Item</h1>
+      <button class="button button-icon button-clear ion-android-cancel" ng-click="modal.hide()"></button>
+    </ion-header-bar>
+    <ion-content>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-pricetag placeholder-icon"></i>
+          <input type="search" ng-model="item.name" ng-required="true" ng-minlength="1" placeholder="What do you need to do?">
+        </label>
+        <button ng-click="addItem(item)" class="button button-small">
+          Submit
+        </button>
+      </div>
+    </ion-content>
+  </div>
+</ion-modal-view>

@@ -11,8 +11,9 @@
 .background-red {
   background-color: $red !important; }
 
-.background-mediumred {
-  background-color: $medium-red !important; }
+.background-mediumred, .background-mediumred .item-content {
+  background-color: $medium-red !important;
+  border-color: transparent }
 
 .background-lightred {
   background-color: $light-red !important; }

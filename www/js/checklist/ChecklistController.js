@@ -3,6 +3,18 @@
   .controller('ChecklistController', function($scope, $ionicModal, $ionicListDelegate, ChecklistFactory){
 
     /*
+      PRIVATE VARIABLES
+    */
+
+      // Object - used by the $scope.applySectionClass function
+      var sectionClasses = {
+        'Preparing Home' : 'checklist-section-red',
+        'While Escrow' : 'checklist-section-blue',
+        'Expenses At Closing' : 'checklist-section-green',
+        'Expenses At Opening' : 'checklist-section-yellow'
+      };
+
+    /*
       SCOPE VARIABLES
     */
 
@@ -78,5 +90,10 @@
       $scope.$on('modal.removed', function() {
         $scope.item = {};
       });
+
+      // Function - Applies a different css class based on the category title
+      $scope.applySectionClass = function(category) {
+        return sectionClasses[category];
+      };
 
     });
