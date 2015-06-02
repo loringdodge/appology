@@ -22,6 +22,7 @@ angular.module('app', [
   'app.LogoutController',
   'app.SignUpController',
   'app.ChecklistController',
+  'app.ChecklistDetailController',
   'app.LocationController',
   'app.ProposalController',
   'app.ProposalsController',
@@ -153,9 +154,11 @@ angular.module('app', [
       // ** View
       .state('tab.checklist-detail', {
         url: '/checklist/:checklistId',
+        params: { item: null },
         views: {
           'tab-checklist': {
-            templateUrl: 'templates/checklist-detail.html'
+            templateUrl: 'templates/checklist-detail.html',
+            controller: 'ChecklistDetailController'
           }
         }
       })

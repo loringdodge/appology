@@ -128,6 +128,11 @@ angular.module('app.ChecklistFactory', [])
         return checklist;
       }
 
+      // Get checklist
+      var getChecklistItem = function(id) {
+        return checklist[id];
+      }
+
       // Move item to a different index of array
       var moveItem = function(item, fromIndex, toIndex) {
         checklist.splice(fromIndex, 1);
