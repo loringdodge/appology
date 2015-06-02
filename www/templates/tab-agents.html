@@ -1,18 +1,16 @@
-<ion-view view-title="Agents">
+<ion-view view-title="Agent Directory">
   <ion-content>
 
-    <header></header>
-
-    <div ng-controller="LocationController">
+<!--     <div ng-controller="LocationController">
         <h1 class="title">Ionic maps autocomplete</h1>
         <div class="list">
           <label class="item item-input">
             <input type="text" placeholder="Location" location-suggestion location="location" ng-model="location.formatted_address">
           </label>
         </div>
-    </div>
+    </div> -->
 
-<!--     <div class="list">
+    <div class="list">
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
           <i class="icon ion-search placeholder-icon"></i>
@@ -23,12 +21,16 @@
         </button>
       </div>
 
-      <a class="item item-avatar" href="#/tab/agent/{{ agent.agent_id }}" ng-repeat="agent in agents">
+      <a class="item item-thumbnail-left agents-item" href="#/tab/agent/{{ agent.agent_id }}" ng-repeat="agent in agents">
         <img src="{{ agent.photo }}">
-        <h2>{{ agent.name }}</h2>
+        <h3>{{ agent.name }}</h3>
         <p>{{ agent.brokerage }}</p>
+        <p>{{ agent.years_of_exp }} yrs. of experience</p>
+        <star-directive rating="agent.zillow_rating">
+          <!-- <i ng-repeat="star in parseStars(5) track by $index" ng-class="($index < agent.zillow_rating) ? 'icon ion-android-star' : 'icon ion-android-star-outline'"></i> -->
+        </star-directive>
       </a>
-    </div> -->
+    </div>
 
   </ion-content>
 </ion-view>

@@ -33,6 +33,7 @@ angular.module('app', [
   // Directives
   'app.LocationDirective',
   'app.CommissionDirective',
+  'app.StarDirective',
 
   // Modules
   'ionic.utils',

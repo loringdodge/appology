@@ -1,0 +1,23 @@
+// Agent
+// -------------------------------
+
+.agents-item {
+
+  img:first-child {
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .icon {
+    color: $medium-yellow;
+  }
+
+}

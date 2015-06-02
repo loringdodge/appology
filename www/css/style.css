@@ -35,6 +35,9 @@
   -webkit-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px; }
 
+.margin-none {
+  margin: 0; }
+
 .background-lightgrey, .background-lightgrey .pane, .background-lightgrey .item-complex {
   background-color: #F7F7F7; }
 
@@ -229,6 +232,16 @@ ion-tabs.tabs-color-active-white .tab-item {
 
 .text-bold {
   font-weight: bold; }
+
+.agents-item img:first-child {
+  border-radius: 50%; }
+.agents-item h3 {
+  margin: 0; }
+.agents-item p {
+  margin: 0;
+  font-size: 12px; }
+.agents-item .icon {
+  color: #FDD835; }
 
 .checklist-section-red {
   background-color: #EF9A9A; }
