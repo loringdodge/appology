@@ -3,6 +3,7 @@
 
     <div class="list">
 
+      <!-- Agent Profile -->
       <div class="item agent-profile">
         <img src="{{ agent.photo }}">
         <h2>{{ agent.name }}</h2>
@@ -17,11 +18,16 @@
 
     </div>
 
+    <!-- Buttons -->
     <div class="button-bar padding">
+      <!-- Info -->
       <a class="button button-small button-white button-border-grey button-radius-small-left" href="#/tab/agent/{{ agent.agent_id }}/info">Info</a>
+      <!-- Reviews -->
       <a class="button button-small button-white button-border-grey button-radius-small-right" href="#/tab/agent/{{ agent.agent_id }}/reviews">Reviews</a>
     </div>
 
+
+    <!-- ui-view -->
     <div ui-view="profile-view"></div>
 
   </ion-content>
