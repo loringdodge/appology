@@ -27,7 +27,7 @@ angular.module('app.StarDirective', [])
 
     return {
       restrict: 'E',
-      templateUrl: 'templates/star-directive.html',
+      templateUrl: 'js/directives/star.view.html',
       scope: {
         rating: '='
       },

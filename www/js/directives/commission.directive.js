@@ -32,7 +32,7 @@ angular.module('app.CommissionDirective', [])
 
     return {
       restrict: 'A',
-      templateUrl: 'templates/commission-directive.html',
+      templateUrl: 'js/directives/commission.view.html',
       scope:{
       },
       replace: true,

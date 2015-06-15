@@ -47,7 +47,7 @@ angular.module('app.ReviewImgDirective', [])
 
     return {
       restrict: 'E',
-      templateUrl: 'templates/review-img-directive.html',
+      templateUrl: 'js/directives/review-img.view.html',
       scope: {
         image: '=',
         name: '='

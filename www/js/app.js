@@ -31,6 +31,7 @@ angular.module('app', [
   'app.SplashController',
 
   // Directives
+  'app.NoScrollDirective',
   'app.StarDirective',
   'app.ReviewImgDirective',
   'app.LocationDirective',
@@ -55,19 +56,6 @@ angular.module('app', [
   });
 })
 
-// .directive('noScroll', function($document) {
-
-//   return {
-//     restrict: 'A',
-//     link: function($scope, $element, $attr) {
-
-//       $document.on('touchmove', function(e) {
-//         e.preventDefault();
-//       });
-//     }
-//   }
-// })
-
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
 /******** CONTENTS *********
@@ -86,7 +74,7 @@ angular.module('app', [
     */
     .state('splash', {
       url: '/splash',
-      templateUrl: 'templates/splash.html',
+      templateUrl: 'js/splash/splash.view.html',
       controller: 'SplashController'
     })
 
@@ -123,7 +111,7 @@ angular.module('app', [
       url: '/request',
       views: {
         'tab-request': {
-          templateUrl: 'templates/tab-request.html',
+          templateUrl: 'js/request/request-tab.view.html',
           controller: 'BellController'
         }
       }
@@ -133,7 +121,7 @@ angular.module('app', [
         url: '/request/submit',
         views: {
           'tab-request': {
-            templateUrl: 'templates/request-submit.html',
+            templateUrl: 'js/request/request-submit.view.html',
             controller: 'RequestController'
           }
         }
@@ -148,7 +136,7 @@ angular.module('app', [
       url: '/checklist',
       views: {
         'tab-checklist': {
-          templateUrl: 'templates/tab-checklist.html',
+          templateUrl: 'js/checklist/checklist-tab.view.html',
           controller: 'ChecklistController'
         }
       }
@@ -159,7 +147,7 @@ angular.module('app', [
         params: { item: null },
         views: {
           'tab-checklist': {
-            templateUrl: 'templates/checklist-detail.html',
+            templateUrl: 'js/checklist/checklist-detail.view.html',
             controller: 'ChecklistDetailController'
           }
         }
@@ -169,7 +157,7 @@ angular.module('app', [
         url: '/checklist/add',
         views: {
           'tab-checklist': {
-            templateUrl: 'templates/checklist-add.html'
+            templateUrl: 'js/checklist/checklist-add.view.html'
           }
         }
       })
@@ -182,7 +170,7 @@ angular.module('app', [
       url: '/proposals/:userId',
       views: {
         'tab-proposals': {
-          templateUrl: 'templates/tab-proposals.html',
+          templateUrl: 'js/proposal/proposals-tab.view.html',
           controller: 'ProposalsController'
         }
       }
@@ -192,7 +180,7 @@ angular.module('app', [
         url: '/proposal/:proposalId',
         views: {
           'tab-proposals': {
-            templateUrl: 'templates/proposal.html',
+            templateUrl: 'js/proposal/proposal.view.html',
             controller: 'ProposalController'
           }
         }
@@ -202,7 +190,7 @@ angular.module('app', [
           url: '/fees',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-fees.html',
+              templateUrl: 'js/proposal/proposal-fees.view.html',
               controller: 'ProposalController'
             }
           }
@@ -213,7 +201,7 @@ angular.module('app', [
           url: '/services',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-services.html',
+              templateUrl: 'js/proposal/proposal-services.view.html',
               controller: 'ProposalController'
             }
           }
@@ -224,7 +212,7 @@ angular.module('app', [
           url: '/questions',
           views: {
             'proposal-view': {
-              templateUrl: 'templates/proposal-questions.html',
+              templateUrl: 'js/proposal/proposal-questions.view.html',
               controller: 'ProposalController'
             }
           }
@@ -237,7 +225,7 @@ angular.module('app', [
       url: '/agents',
       views: {
         'tab-agents': {
-          templateUrl: 'templates/tab-agents.html',
+          templateUrl: 'js/agent/agents-tab.view.html',
           controller: 'AgentsController'
         }
       }
@@ -247,7 +235,7 @@ angular.module('app', [
         url: '/agent/:agentId',
         views: {
           'tab-agents': {
-            templateUrl: 'templates/agent.html',
+            templateUrl: 'js/agent/agent.view.html',
             controller: 'AgentController'
           }
         }
@@ -257,7 +245,7 @@ angular.module('app', [
           url: '/info',
           views: {
             'profile-view': {
-              templateUrl: 'templates/agent-info.html',
+              templateUrl: 'js/agent/agent-info.view.html',
               controller: 'AgentController'
             }
           }
@@ -267,7 +255,7 @@ angular.module('app', [
           url: '/reviews',
           views: {
             'profile-view': {
-              templateUrl: 'templates/agent-reviews.html',
+              templateUrl: 'js/agent/agent-reviews.view.html',
               controller: 'AgentController'
             }
           }
