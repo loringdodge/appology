@@ -1,7 +1,7 @@
 // Agent
 // -------------------------------
 
-.agents-item {
+.agent-item {
 
   img:first-child {
     border-radius: 50%;
@@ -18,10 +18,71 @@
 
 }
 
-.review-item {
+.agent-profile {
+  background-color: $red;
+
+  img:first-child {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+    @include border-radius(50%);
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, .3));
+  }
+
+  h2 {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    color: $white;
+  }
+
+  p {
+    margin: 0;
+    line-height: 17px;
+    text-align: center;
+    color: $white;
+
+    &.location {
+
+      i {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+
+    &.stars {
+      font-size: 20px;
+
+      i {
+        color: white;
+      }
+    }
+  }
+
+}
+
+.agent-review-item {
 
   .icon {
     height: 15px;
+  }
+
+}
+
+.agent-info-item {
+
+  i {
+    float: left;
+  }
+
+  h2 {
+    float: left;
+    margin: 0 0 10px 5px;
+  }
+
+  p {
+    clear: both;
   }
 
 }

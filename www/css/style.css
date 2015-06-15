@@ -251,16 +251,53 @@ ion-tabs.tabs-color-active-white .tab-item {
 .text-bold {
   font-weight: bold; }
 
-.agents-item img:first-child {
+.agent-item img:first-child {
   border-radius: 50%; }
-.agents-item h3 {
+.agent-item h3 {
   margin: 0; }
-.agents-item p {
+.agent-item p {
   margin: 0;
   font-size: 12px; }
 
-.review-item .icon {
+.agent-profile {
+  background-color: #DE574E; }
+  .agent-profile img:first-child {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+  .agent-profile h2 {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF !important; }
+  .agent-profile p {
+    margin: 0;
+    line-height: 17px;
+    text-align: center;
+    color: #FFF !important; }
+    .agent-profile p.location i {
+      margin-right: 10px;
+      font-size: 20px; }
+    .agent-profile p.stars {
+      font-size: 20px; }
+      .agent-profile p.stars i {
+        color: white; }
+
+.agent-review-item .icon {
   height: 15px; }
+
+.agent-info-item i {
+  float: left; }
+.agent-info-item h2 {
+  float: left;
+  margin: 0 0 10px 5px; }
+.agent-info-item p {
+  clear: both; }
 
 .checklist-section-red {
   background-color: #EF9A9A; }

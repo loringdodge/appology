@@ -2,30 +2,19 @@
   <ion-content>
 
     <div class="list">
-      <div class="item item-avatar">
+
+      <div class="item agent-profile">
         <img src="{{ agent.photo }}">
         <h2>{{ agent.name }}</h2>
         <p>{{ agent.brokerage }}</p>
+        <p>{{ agent.years_of_exp }} years of experience</p>
+        <p class="location"><i class="ion-ios-location"></i>San Francisco, California</p>
+        <p class="stars">
+          <star-directive rating="agent.zillow_rating"></star-directive>
+        </p>
+        <p>( {{ agent.reviews.length }} reviews )</p>
       </div>
 
-      <div class="item item-body">
-        <p>{{ agent.about }}</p>
-      </div>
-
-      <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" href="#">
-          <i class="icon ion-thumbsup"></i>
-          Like
-        </a>
-        <a class="tab-item" href="#">
-          <i class="icon ion-chatbox"></i>
-          Comment
-        </a>
-        <a class="tab-item" href="#">
-          <i class="icon ion-share"></i>
-          Share
-        </a>
-      </div>
     </div>
 
     <div class="button-bar padding">
