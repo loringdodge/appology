@@ -2,30 +2,52 @@ angular.module('app.ReviewImgDirective', [])
 
   .directive('reviewImgDirective', function(){
 
+    /*
+      CONTROLLER
+    */
+
     var controller = function($scope) {
 
-      var isNotEmpty = function(string) {
-        return string.length > 0;
-      };
+      /*
+        FUNCTIONS
+      */
 
-      var randomInt = function(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      };
+        // Function - is string not empty?
+        var isNotEmpty = function(string) {
+          return string.length > 0;
+        };
 
-      var getInitials = function(name) {
-        return name.split(' ').map(function(s) { return s.charAt(0).toUpperCase(); }).slice(0, 2).join('');
-      }
+        // Function - get a random integer
+        var randomInt = function(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
 
-      $scope.isImage = isNotEmpty;
+        // Function - turn a name into a set of 2 initials
+        var getInitials = function(name) {
+          return name.split(' ').map(function(s) { return s.charAt(0).toUpperCase(); }).slice(0, 2).join('');
+        }
 
-      $scope.initials = getInitials($scope.name);
+        // Function - get a random color class for background of initials
+        var randomColorClass = function() {
+          var colors = ['red', 'blue', 'green'];
+          return colors[randomInt(0, 2)];
+        }
 
-      $scope.randomColorClass = function() {
-        var colors = ['red', 'blue', 'green'];
-        return colors[randomInt(0, 2)];
-      }
+      /*
+        SCOPE
+      */
+
+        $scope.isImage = isNotEmpty;
+
+        $scope.initials = getInitials($scope.name);
+
+        $scope.randomColorClass = randomColorClass;
 
     };
+
+    /*
+      CONFIG
+    */
 
     return {
       restrict: 'E',
