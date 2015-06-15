@@ -2,9 +2,7 @@ angular.module('app.ReviewImgDirective', [])
 
   .directive('reviewImgDirective', function(){
 
-    /*
-      CONTROLLER
-    */
+    /* CONTROLLER */
 
     var controller = function($scope) {
 
@@ -12,22 +10,22 @@ angular.module('app.ReviewImgDirective', [])
         FUNCTIONS
       */
 
-        // Function - is string not empty?
+        // Boolean - is string not empty?
         var isNotEmpty = function(string) {
           return string.length > 0;
         };
 
-        // Function - get a random integer
+        // Number - get a random integer
         var randomInt = function(min, max) {
           return Math.floor(Math.random() * (max - min + 1)) + min;
         };
 
-        // Function - turn a name into a set of 2 initials
+        // String - turn a name into a set of 2 initials
         var getInitials = function(name) {
           return name.split(' ').map(function(s) { return s.charAt(0).toUpperCase(); }).slice(0, 2).join('');
         }
 
-        // Function - get a random color class for background of initials
+        // String - get a random color class for background of initials
         var randomColorClass = function() {
           var colors = ['red', 'blue', 'green'];
           return colors[randomInt(0, 2)];
@@ -45,9 +43,7 @@ angular.module('app.ReviewImgDirective', [])
 
     };
 
-    /*
-      CONFIG
-    */
+    /* CONFIG */
 
     return {
       restrict: 'E',

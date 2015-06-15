@@ -2,21 +2,28 @@ angular.module('app.StarDirective', [])
 
   .directive('starDirective', function($timeout){
 
-    /*
-      CONTROLLER
-    */
+    /* CONTROLLER */
 
     var controller = function($scope) {
 
-        $scope.parseStars = function(n) {
+      /*
+        FUNCTIONS
+      */
+
+        // Array - Make a new array based on an integer
+        var makeArray = function(n) {
           return new Array(Math.round(n));
         }
 
+      /*
+        SCOPE
+      */
+
+      $scope.parseStars = makeArray;
+
     };
 
-    /*
-      CONFIG
-    */
+    /* CONFIG */
 
     return {
       restrict: 'E',
