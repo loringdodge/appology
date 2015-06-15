@@ -1,8 +1,9 @@
-<div ng-repeat="review in agent.reviews">
-  <div class="item item-avatar item-text-wrap">
-    <img src="{{ review.photo_url }}">
-    <h2>{{ review.name }}</h2>
-    <p>{{ review.rating }}</p>
+<div class="list card" ng-repeat="review in agent.reviews">
+  <div class="item item-avatar item-text-wrap review-item">
+    <review-img-directive image="review.photo_url" name="review.name"></review-img-directive>
+    <!-- <img src="{{ review.photo_url }}"/> -->
+    <h2>{{ review.name }} <img class="icon" src="img/reviews-yelp.png"/></h2>
+    <star-directive rating="review.rating"></star-directive>
     <p>
       {{ review.summary }}
     </p>

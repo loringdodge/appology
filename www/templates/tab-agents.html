@@ -26,9 +26,7 @@
         <h3>{{ agent.name }}</h3>
         <p>{{ agent.brokerage }}</p>
         <p>{{ agent.years_of_exp }} yrs. of experience</p>
-        <star-directive rating="agent.zillow_rating">
-          <!-- <i ng-repeat="star in parseStars(5) track by $index" ng-class="($index < agent.zillow_rating) ? 'icon ion-android-star' : 'icon ion-android-star-outline'"></i> -->
-        </star-directive>
+        <star-directive rating="agent.zillow_rating"></star-directive>
       </a>
     </div>
 

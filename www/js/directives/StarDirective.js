@@ -6,7 +6,7 @@ angular.module('app.StarDirective', [])
       $scope.parseStars = function(n) {
         return new Array(Math.round(n));
       }
-    }
+    };
 
     return {
       restrict: 'E',

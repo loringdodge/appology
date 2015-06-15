@@ -1,0 +1,21 @@
+// Review Image Directive
+// -------------------------------
+
+.review-image {
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 20px;
+  color: $white;
+}
+
+.review-image.red {
+  background-color: $red !important;
+}
+
+.review-image.blue {
+  background-color: $blue !important;
+}
+
+.review-image.green {
+  background-color: $green !important;
+}

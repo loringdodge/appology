@@ -31,9 +31,10 @@ angular.module('app', [
   'app.SplashController',
 
   // Directives
+  'app.StarDirective',
+  'app.ReviewImgDirective',
   'app.LocationDirective',
   'app.CommissionDirective',
-  'app.StarDirective',
 
   // Modules
   'ionic.utils',

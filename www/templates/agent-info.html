@@ -1,8 +1,31 @@
 <div class="card">
   <div class="item item-text-wrap">
-    <h2>Education:</h2>
-    <p ng-repeat="item in profile.education">
+    <i class="icon ion-person"></i>
+    <h2>ABOUT</h2>
+    <p>
+      {{ agent.about }}
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+    <i class="icon ion-university"></i>
+    <h2>EDUCATION</h2>
+    <p ng-repeat="item in agent.education">
       {{ item }}
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="item item-text-wrap">
+    <i class="icon ion-chatbubble-working"></i>
+    <h2>LANGUAGE</h2>
+    <p>
+      <span ng-repeat="item in agent.languages">
+        {{ item }}
+      </span>
     </p>
   </div>
 </div>

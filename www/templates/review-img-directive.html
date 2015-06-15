@@ -1,0 +1,4 @@
+<div>
+  <img class="item-image" ng-show="isImage(image)" src="{{ image }}" />
+  <div ng-class="['item-image', 'review-image', randomColorClass() ]" ng-show="!isImage(image)">{{ initials }}</div>
+</div>
