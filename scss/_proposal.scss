@@ -1,0 +1,65 @@
+// Proposal
+// -------------------------------
+
+.proposal-cards .td-cards {
+
+  &:first-child {
+
+  }
+}
+
+.proposal-card {
+  background-color: $white;
+
+  &:first-child {
+
+  }
+}
+
+.proposal-profile {
+
+  .item {
+    border: none;
+  }
+
+  img:first-child {
+    margin: 15px auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+    @include border-radius(50%);
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, .3));
+  }
+
+  h2 {
+    margin: 0 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: $black;
+  }
+
+  p {
+    margin: 0;
+    line-height: 17px;
+    text-align: center;
+    color: $black;
+
+    &.location {
+
+      i {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+
+    &.stars {
+      font-size: 20px;
+
+      i {
+        // color: $black;
+      }
+    }
+  }
+
+}
