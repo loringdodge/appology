@@ -18,6 +18,16 @@
   background-color: $red;
   border: none; }
 
+.button-blue {
+  color: $white;
+  background-color: $blue;
+  border: none; }
+
+.button-green {
+  color: $white;
+  background-color: $green;
+  border: none; }
+
 // Border
 .button-border-grey {
   @include box-shadow(0 1px 3px rgba(0, 0, 0, .3));
