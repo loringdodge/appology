@@ -2,33 +2,21 @@
 
   .controller('ProposalsController', function($scope, $stateParams, $ionicSwipeCardDelegate, ProposalFactory){
 
-    $scope.$on('removeCard', function(event, element, card) {
-      console.log("Got it");
-    });
-
     /*
       SCOPE VARIABLES
     */
 
     /*
-      SCOPE FUNCTIONS
+      LISTENERS
     */
 
-      // // Add a card to the deck - function body added after ProposalFactory proposal receives
-      // $scope.addCard = function() {};
-
-      // // Adds a specified card to the deck
-      // $scope.cardSwiped = function(index) {
-      //   $scope.addCard();
-      // };
-
-      // // Removes a specified card from the deck
-      // $scope.cardDestroyed = function(index) {
-      //   $scope.cards.splice(index, 1);
-      // };
+      // Listener - Executes when it detects a card has been removed
+      $scope.$on('removeCard', function(event, element, card) {
+        console.log("Got it");
+      });
 
     /*
-      PROMISED SCOPE
+      PROMISE
     */
 
       // Returns an array of proposals for a specified user

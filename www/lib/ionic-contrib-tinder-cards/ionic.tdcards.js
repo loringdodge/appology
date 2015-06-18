@@ -323,9 +323,9 @@
         onDestroy: '&',
       },
       controller: ['$scope', '$element', function($scope, $element) {
+        // Removes card on invocation
         $scope.$parent.onClickTransitionOut = function(card) {
           var element = $scope.$parent.swipeCard;
-          console.log(element);
           element.onClickTransitionOut();
           $scope.$emit('removeCard', element, card);
         }
