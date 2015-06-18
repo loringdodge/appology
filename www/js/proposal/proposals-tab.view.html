@@ -1,36 +1,86 @@
 <ion-view view-title="Proposals">
-  <ion-content>
+    <ion-pane ng-controller="CardsController" ion-side-menu-content drag-content="false">
 
-    <!--
-      Tabs:
-      Each tab's child <ion-nav-view> directive will have its own
-      navigation history that also transitions its views in and out.
-    -->
+    <!-- ng-if required here so cards are only loaded after promise -->
+    <div ng-if="cards">
+      <td-cards class="proposal-cards">
+        <td-card ng-repeat="card in cards" class="proposal-card card-{{$index}}" on-destroy="cardDestroyed($index)" on-partial-swipe="cardPartialSwipe(amt)">
+          <div ng-controller="CardController">
+            <div class="proposal-profile" ng-controller="CardController">
+              <div>
+                <img src="{{ card.photo }}">
+                <h2>{{ card.name }}</h2>
+                <p>{{ card.brokerage }}</p>
+                <p>{{ card.years_of_exp }} years of experience</p>
+                <p class="location"><i class="ion-ios-location"></i>San Francisco, California</p>
+                <p class="stars">
+                  <star-directive rating="card.zillow_rating"></star-directive>
+                </p>
+                <p>( {{ card.reviews.length }} reviews )</p>
+                <div class="corner-ribbon top-right sticky orange"> out of {{ cardsLength }}</div>
+              </div>
+
+            </div>
+
+            <div class="padding">
+              <!-- Link - View Proposal -->
+              <a class="button button-full button-blue border-radius-5" href="#/tab/proposal/{{ card.proposal_id }}">View</a>
+              <!-- Link - Interview -->
+              <button class="button button-full button-green border-radius-5" ng-click="goAway()">Interview</button>
+              <!-- Action - Decline Proposal -->
+              <button class="button button-full button-red border-radius-5" ng-click="onClickTransitionOut(card)">Decline</button>
+            </div>
+  <!--             <div class="no-text">NOPE</div> -->
+  <!--             <div class="yes-text">LIKE</div> -->
+            </div>
+          </div>
+        </td-card>
+        <td-card id="end-card">
+          <i class="icon ion-ios-refresh" ng-click="refreshCards()"></i>
+        </td-card>
+      </td-cards>
+    </div>
+
+    </ion-pane>
+</ion-view>
+
+
+<!-- <ion-view view-title="Proposals">
+  <ion-content class="padding">
+
+
+
     <swipe-cards>
 
-      <!-- Starter Card - The first card shown (not included in deck) -->
+
       <swipe-card on-card-swipe="cardSwiped()" id="start-card">
         Swipe down for a new card
       </swipe-card>
 
-      <!-- Deck - A proposal per card -->
+
       <swipe-card ng-repeat="proposal in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
         <div ng-controller="CardCtrl">
-          <div class="list card">
-            <div class="item item-avatar">
-              <img src="{{ proposal.photo }}">
-              <h2>{{ proposal.name }}</h2>
-              <p>{{ proposal.brokerage }}</p>
-            </div>
+            <div class="list">
 
-            <div class="item item-body">
-              <p></p>
+
+              <div class="item agent-profile">
+                <img src="{{ proposal.photo }}">
+                <h2>{{ proposal.name }}</h2>
+                <p>{{ proposal.brokerage }}</p>
+                <p>{{ proposal.years_of_exp }} years of experience</p>
+                <p class="location"><i class="ion-ios-location"></i>San Francisco, California</p>
+                <p class="stars">
+                  <star-directive rating="proposal.zillow_rating"></star-directive>
+                </p>
+                <p>( {{ proposal.reviews.length }} reviews )</p>
+              </div>
+
             </div>
 
             <div class="button-bar">
-              <!-- View Proposal -->
+
               <a class="button button-positive" href="#/tab/proposal/{{ proposal.proposal_id }}">View</a>
-              <!-- Decline Proposal -->
+
               <button class="button button-assertive" ng-click="goAway()">Decline</button>
             </div>
           </div>
@@ -39,4 +89,4 @@
     </swipe-cards>
 
   </ion-content>
-</ion-view>
+</ion-view> -->

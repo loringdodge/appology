@@ -213,8 +213,8 @@ td-card img {
 //   100% {
 //     -webkit-transform: scale(1, 1); } }
 
-// swipe-card.pop-in-start {
-//   -webkit-transform: scale(0, 0); }
+td-card.pop-in-start {
+  -webkit-transform: scale(0, 0); }
 
-// swipe-card.pop-in {
-//   -webkit-animation: bounceIn 0.4s ease-out; }
+td-card.pop-in {
+  -webkit-animation: bounceIn 0.4s ease-out; }

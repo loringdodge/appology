@@ -21,6 +21,8 @@ angular.module('app', [
   'app.LoginController',
   'app.LogoutController',
   'app.SignUpController',
+  'app.CardController',
+  'app.CardsController',
   'app.ChecklistController',
   'app.ChecklistDetailController',
   'app.LocationController',
@@ -39,6 +41,7 @@ angular.module('app', [
 
   // Modules
   'ionic.utils',
+  'ionic.contrib.ui.tinderCards',
   'ionic.contrib.ui.cards'
 ])
 
