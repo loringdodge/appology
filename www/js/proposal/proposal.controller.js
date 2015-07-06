@@ -6,6 +6,7 @@
       SCOPE VARIABLES
     */
 
+
       // Array - list of checklist items
       ProposalFactory.getProposal($stateParams.proposalId)
         .then(function(data){
@@ -13,6 +14,6 @@
         })
         .catch(function(err){
           console.log(err);
-        })
+        });
 
   });

@@ -1,33 +1,11 @@
-<div class="list">
+<ion-list>
 
-  <div class="item item-text-wrap">
-    <h2>What is the reason for you to hire me?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-    <a href="#">Read More</a>
-  </div>
+  <ion-item ng-repeat="question in questions" class="item item-text-wrap">
+    <div class="item-expand">
+      <h2>{{ question.q }}</h2>
+      <p>{{ question.a }}</p>
+    </div>
+    <div ng-click="toggleGroup(question)" class="margin-top"><i ng-class="isGroupShown(question) ? 'ion-ios-minus-outline margin-right' : 'ion-ios-plus-outline margin-right'"></i>Read More</div>
+  </ion-item>
 
-  <div class="item item-text-wrap">
-    <h2>Why am I the best agent for you?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-    <a href="#">Read More</a>
-  </div>
-
-  <div class="item item-text-wrap">
-    <h2>What are my insights into local market trends?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-    <a href="#">Read More</a>
-  </div>
-
-  <div class="item item-text-wrap">
-    <h2>How will I market your home?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-    <a href="#">Read More</a>
-  </div>
-
-  <div class="item item-text-wrap">
-    <h2>How will I communicate with you?</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
-    <a href="#">Read More</a>
-  </div>
-
-</div>
+</ion-list>

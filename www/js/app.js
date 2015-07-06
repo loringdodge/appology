@@ -27,6 +27,7 @@ angular.module('app', [
   'app.ChecklistDetailController',
   'app.LocationController',
   'app.ProposalController',
+  'app.ProposalQuestionsController',
   'app.ProposalsController',
   'app.BellController',
   'app.RequestController',
@@ -217,7 +218,7 @@ angular.module('app', [
           views: {
             'proposal-view': {
               templateUrl: 'js/proposal/proposal-questions.view.html',
-              controller: 'ProposalController'
+              controller: 'ProposalQuestionsController'
             }
           }
         })
