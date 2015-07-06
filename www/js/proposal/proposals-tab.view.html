@@ -30,8 +30,7 @@
               <!-- Action - Decline Proposal -->
               <button class="button button-full button-red border-radius-5" ng-click="onClickTransitionOut(card)">Decline</button>
             </div>
-  <!--             <div class="no-text">NOPE</div> -->
-  <!--             <div class="yes-text">LIKE</div> -->
+
             </div>
           </div>
         </td-card>
@@ -43,50 +42,3 @@
 
     </ion-pane>
 </ion-view>
-
-
-<!-- <ion-view view-title="Proposals">
-  <ion-content class="padding">
-
-
-
-    <swipe-cards>
-
-
-      <swipe-card on-card-swipe="cardSwiped()" id="start-card">
-        Swipe down for a new card
-      </swipe-card>
-
-
-      <swipe-card ng-repeat="proposal in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped($index)">
-        <div ng-controller="CardCtrl">
-            <div class="list">
-
-
-              <div class="item agent-profile">
-                <img src="{{ proposal.photo }}">
-                <h2>{{ proposal.name }}</h2>
-                <p>{{ proposal.brokerage }}</p>
-                <p>{{ proposal.years_of_exp }} years of experience</p>
-                <p class="location"><i class="ion-ios-location"></i>San Francisco, California</p>
-                <p class="stars">
-                  <star-directive rating="proposal.zillow_rating"></star-directive>
-                </p>
-                <p>( {{ proposal.reviews.length }} reviews )</p>
-              </div>
-
-            </div>
-
-            <div class="button-bar">
-
-              <a class="button button-positive" href="#/tab/proposal/{{ proposal.proposal_id }}">View</a>
-
-              <button class="button button-assertive" ng-click="goAway()">Decline</button>
-            </div>
-          </div>
-        </div>
-      </swipe-card>
-    </swipe-cards>
-
-  </ion-content>
-</ion-view> -->
