@@ -33,16 +33,17 @@ angular.module('app', [
   'app.SplashController',
 
   // Directives
-  'app.NoScrollDirective',
-  'app.StarDirective',
-  'app.ReviewImgDirective',
-  'app.LocationDirective',
   'app.CommissionDirective',
+  'app.LocationDirective',
+  'app.NoScrollDirective',
+  'app.ProposalFeesDirective',
+  'app.ReviewImgDirective',
+  'app.StarDirective',
 
   // Modules
+  'd3Module',
   'ionic.utils',
   'ionic.contrib.ui.tinderCards',
-  'ionic.contrib.ui.cards'
 ])
 
 .run(function($ionicPlatform) {

@@ -1,6 +1,6 @@
  angular.module('app.ProposalsController', [])
 
-  .controller('ProposalsController', function($scope, $stateParams, $ionicSwipeCardDelegate, ProposalFactory){
+  .controller('ProposalsController', function($scope, $stateParams, ProposalFactory){
 
     /*
       SCOPE VARIABLES
