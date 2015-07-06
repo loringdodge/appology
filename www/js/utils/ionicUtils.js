@@ -22,4 +22,5 @@ angular.module('ionic.utils', [])
       return Object.keys($window.localStorage[key]).length;
     }
   }
+
 }]);

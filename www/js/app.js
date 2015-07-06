@@ -200,7 +200,7 @@ angular.module('app', [
         })
 
         // *** Service
-        .state('tab.proposal-detail.service', {
+        .state('tab.proposal.services', {
           url: '/services',
           views: {
             'proposal-view': {
@@ -211,7 +211,7 @@ angular.module('app', [
         })
 
         // *** Questions
-        .state('tab.proposal-detail.questions', {
+        .state('tab.proposal.questions', {
           url: '/questions',
           views: {
             'proposal-view': {
