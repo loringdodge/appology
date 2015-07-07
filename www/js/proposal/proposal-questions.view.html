@@ -1,7 +1,7 @@
 <ion-list>
 
   <ion-item ng-repeat="question in questions" class="item item-text-wrap">
-    <div class="item-expand">
+    <div ng-class="isGroupShown(question) ? 'item-expand.active' : 'item-expand'">
       <h2>{{ question.q }}</h2>
       <p>{{ question.a }}</p>
     </div>
