@@ -6,6 +6,7 @@ angular.module('app.RequestFactory', [])
       HTTP FUNCTIONS
     */
 
+      // Get bell data
       var getBellData = function() {
         return $http.get('http://localhost:8888/api/bell')
           .then(function(res){

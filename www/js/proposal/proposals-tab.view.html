@@ -1,7 +1,11 @@
 <ion-view view-title="Proposals">
     <ion-pane ng-controller="CardsController" ion-side-menu-content drag-content="false">
 
-    <!-- ng-if required here so cards are only loaded after promise -->
+    <!-- *************************
+      Cards
+    ************************* -->
+
+    <!-- ng-if : required here so that cards are only loaded after promise -->
     <div ng-if="cards">
       <td-cards class="proposal-cards">
         <td-card ng-repeat="card in cards" class="proposal-card card-{{$index}}" on-destroy="cardDestroyed($index)" on-partial-swipe="cardPartialSwipe(amt)">
@@ -26,7 +30,7 @@
               <!-- Link - View Proposal -->
               <a class="button button-full button-blue border-radius-5" href="#/tab/proposal/{{ card.proposal_id }}">View</a>
               <!-- Link - Interview -->
-              <button class="button button-full button-green border-radius-5" ng-click="goAway()">Interview</button>
+              <button class="button button-full button-green border-radius-5" ui-sref="tab.interview({ proposalId: 1 })">Interview</button>
               <!-- Action - Decline Proposal -->
               <button class="button button-full button-red border-radius-5" ng-click="onClickTransitionOut(card)">Decline</button>
             </div>
@@ -34,6 +38,7 @@
             </div>
           </div>
         </td-card>
+        <!-- Last card (refresh button) -->
         <td-card id="end-card">
           <i class="icon ion-ios-refresh" ng-click="refreshCards()"></i>
         </td-card>

@@ -3,7 +3,7 @@
   .controller('ProposalQuestionsController', function($scope, ProposalFactory){
 
     /*
-      SCOPE VARIABLES
+      SCOPE
     */
 
       $scope.questions = [{

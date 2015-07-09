@@ -3,12 +3,17 @@
   .controller('BellController', function($scope, RequestFactory){
 
     /*
-      SCOPE VARIABLES
+      SCOPE
     */
 
+      // Object - loaded from getBellData promise
       $scope.bellData = {};
 
-      // Object - Bell Data
+    /*
+      PROMISE
+    */
+
+      // Returns bell Data
       RequestFactory.getBellData()
         .then(function(data){
           $scope.bellData = data;

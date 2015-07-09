@@ -1,11 +1,17 @@
+<!-- Q&A list -->
 <ion-list>
 
   <ion-item ng-repeat="question in questions" class="item item-text-wrap">
+    <!-- Add expand class only if active -->
     <div ng-class="isGroupShown(question) ? 'item-expand.active' : 'item-expand'">
       <h2>{{ question.q }}</h2>
       <p>{{ question.a }}</p>
     </div>
-    <div ng-click="toggleGroup(question)" class="margin-top"><i ng-class="isGroupShown(question) ? 'ion-ios-minus-outline margin-right' : 'ion-ios-plus-outline margin-right'"></i>Read More</div>
+    <!-- On click: Toggle group to active and toggle icon/text -->
+    <div ng-click="toggleGroup(question)" class="margin-top">
+      <i ng-class="isGroupShown(question) ? 'ion-ios-minus-outline margin-right' : 'ion-ios-plus-outline margin-right'"></i>
+      Read {{ isGroupShown(question) ? 'Less' : 'More' }}
+    </div>
   </ion-item>
 
 </ion-list>

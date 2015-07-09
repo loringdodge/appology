@@ -7,13 +7,6 @@ angular.module('app.ProposalFeesDirective', ['ionic', 'd3Module'])
       scope: {},
       link: function(scope, element, attrs) {
 
-//             svg.append("g")
-//   .attr("class", "slices");
-// svg.append("g")
-//   .attr("class", "labels");
-// svg.append("g")
-//   .attr("class", "lines");
-
           // Browser onresize event
           window.onresize = function() {
             scope.$apply();

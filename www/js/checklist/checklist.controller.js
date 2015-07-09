@@ -3,7 +3,7 @@
   .controller('ChecklistController', function($scope, $ionicModal, $ionicListDelegate, ChecklistFactory){
 
     /*
-      PRIVATE VARIABLES
+      PRIVATE
     */
 
       // Object - used by the $scope.applySectionClass function
@@ -15,7 +15,7 @@
       };
 
     /*
-      SCOPE VARIABLES
+      SCOPE
     */
 
       // Array - list of checklist items
@@ -23,10 +23,6 @@
 
       // Object - ngModel for addItem input (modal)
       $scope.item = {};
-
-    /*
-      SCOPE FUNCTIONS
-    */
 
       // Function - Moves an item during reorder
       $scope.moveItem = ChecklistFactory.moveItem;

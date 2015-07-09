@@ -1,12 +1,23 @@
+<!-- *************************
+  Proposal View
+   - Content is loaded into 'proposal-view' on button click
+************************* -->
+
 <ion-view view-title="Proposal Detail">
   <ion-content>
 
     <div class="button-bar padding">
+      <!-- Link - View Fees -->
       <a class="button button-small button-white button-border-grey button-radius-small-left" ui-sref="tab.proposal.fees">Fees</a>
+      <!-- Link - View Services -->
       <a class="button button-small button-white button-border-grey" ui-sref="tab.proposal.services">Services</a>
+      <!-- Link - View Interview -->
+      <a class="button button-small button-white button-border-grey" ui-sref="tab.proposal.interview">Interview</a>
+      <!-- Link - View Questions -->
       <a class="button button-small button-white button-border-grey button-radius-small-right" ui-sref="tab.proposal.questions">Questions</a>
     </div>
 
+    <!-- ui-view -->
     <div ui-view="proposal-view"></div>
 
   </ion-content>

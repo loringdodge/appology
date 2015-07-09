@@ -31,6 +31,7 @@ angular.module('app.AgentFactory', [])
     /*
       RETURN
     */
+
     return {
       getAgents: getAgents,
       getAgent: getAgent

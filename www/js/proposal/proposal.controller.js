@@ -3,11 +3,17 @@
   .controller('ProposalController', function($scope, $stateParams, ProposalFactory){
 
     /*
-      SCOPE VARIABLES
+      SCOPE
     */
 
+      // Object - Loaded from getProposal promise
+      $scope.proposal = {};
 
-      // Array - list of checklist items
+    /*
+      PROMISE
+    */
+
+      // Returns a list of checklist items
       ProposalFactory.getProposal($stateParams.proposalId)
         .then(function(data){
           $scope.proposal = data;

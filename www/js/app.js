@@ -27,6 +27,7 @@ angular.module('app', [
   'app.ChecklistDetailController',
   'app.LocationController',
   'app.ProposalController',
+  'app.ProposalInterviewController',
   'app.ProposalQuestionsController',
   'app.ProposalsController',
   'app.BellController',
@@ -222,6 +223,18 @@ angular.module('app', [
             }
           }
         })
+
+      // *** Interview
+      .state('tab.interview', {
+        url: '/interview/:proposalId',
+        params: { proposalId: null },
+        views: {
+          'tab-proposals': {
+            templateUrl: 'js/proposal/proposal-interview.view.html',
+            controller: 'ProposalInterviewController'
+          }
+        }
+      })
     /*
       * AGENT STATE
       Users browse a list of real estate agents

@@ -3,7 +3,7 @@
   .controller('RequestController', function($scope, $ionicModal, RequestFactory){
 
     /*
-      SCOPE VARIABLES
+      SCOPE
     */
 
       // IonicModal - Attach template and add to scope on deferred
@@ -39,6 +39,7 @@
 
       });
 
+      // Function - Submit Request
       $scope.submitRequest = function(request){
         if (request.$valid) {
           var data = {
