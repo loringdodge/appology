@@ -6,7 +6,7 @@ get started, how to use the workflow, and how to make good contributions.
 How to get started?
 -------------
 
-##1. Installing npm, bower, and cordova/ionic
+###1. Installing npm, bower, and cordova/ionic
 Once the repository has been forked and cloned, the first thing is to
 install all dependencies using npm and bower.
 
@@ -29,7 +29,7 @@ Lasty, install cordova and ionic.
 $ npm install -g cordova ionic
 ```
 
-##2. Install all dependencies
+###2. Install all dependencies
 We have npm, bower, and cordova/ionic but the app has several dependencies
 that need to be installed in order for the app to function.
 
@@ -43,7 +43,7 @@ $ gulp install
 // get stuff via bower
 ```
 
-##3. Run the app
+###3. Run the app
 All the dependencies should now be installed, and it's time to bring it alive on screen.
 There are three ways to test the app as you're working 1) in the browser 2) in the emulator 3) on a mobile device.
 We'll only be covering the first two for now.
@@ -90,9 +90,9 @@ Ionic offers several utilities out-of-the-box to improve the development process
 Ideally, you will end up having 3 windows open:
 
 
-[gulp-watch](./screenshots/console-gulp-watch.png)
+![gulp-watch](./screenshots/console-gulp-watch.png)
 
-[ionic-serve](./screenshots/console-ionic-serve.png)
+![ionic-serve](./screenshots/console-ionic-serve.png)
 
-[node-server](./screenshots/console-node-server.png)
+![node-server](./screenshots/console-node-server.png)
 
