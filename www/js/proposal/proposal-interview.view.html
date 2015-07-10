@@ -13,22 +13,22 @@
         <!-- Date -->
         <h6>Date</h6>
         <label class="item item-input-inset border-radius-5">
-          <i class="icon ion-ios-location placeholder-icon"></i>
-          <input type="text" placeholder="123 Greenfield Dr." ng-model="request.address" ng-minlength="1" required>
+          <i class="icon ion-calendar placeholder-icon"></i>
+          <input type="date" placeholder="123 Greenfield Dr." ng-model="request.address" ng-minlength="1" required>
         </label>
 
         <!-- Time -->
         <h6>Time</h6>
         <label class="item item-input-inset border-radius-5">
-          <i class="icon ion-person placeholder-icon"></i>
-          <input type="text" placeholder="John Doe" ng-model="request.name" ng-minlength="1" required>
+          <i class="icon ion-clock placeholder-icon"></i>
+          <input type="time" placeholder="John Doe" ng-model="request.name" ng-minlength="1" required>
         </label>
 
         <!-- Note -->
         <h6>Notes</h6>
         <label class="item item-input-inset border-radius-5">
-          <i class="icon ion-email placeholder-icon"></i>
-          <input type="text" type="email" placeholder="johndoe@email.com" ng-model="request.email" ng-minlength="1" required>
+<!--           <i class="icon ion-document-text placeholder-icon"></i> -->
+          <textarea rows="10" cols="50" placeholder="Leave a note" ng-model="request.email"></textarea>
         </label>
 
         <!-- Submit Button -->
