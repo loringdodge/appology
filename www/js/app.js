@@ -225,7 +225,7 @@ angular.module('app', [
         })
 
       // *** Interview
-      .state('tab.interview', {
+      .state('tab.proposal-interview', {
         url: '/interview/:proposalId',
         params: { proposalId: null },
         views: {

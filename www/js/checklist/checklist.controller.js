@@ -36,56 +36,56 @@
         $scope.modal.hide();
       }
 
-      // Function - Toggle delete buttons
-      var deleteButtonBool = false;
-      $scope.showDeleteButtons = function(reorderButtonBool, deleteButtonBool) {
-        if(reorderButtonBool) $scope.showReorderButtons();
-        deleteButtonBool = !deleteButtonBool;
-        $ionicListDelegate.showDelete(deleteButtonBool);
-      };
+      // // Function - Toggle delete buttons
+      // var deleteButtonBool = false;
+      // $scope.showDeleteButtons = function(reorderButtonBool, deleteButtonBool) {
+      //   if(reorderButtonBool) $scope.showReorderButtons();
+      //   deleteButtonBool = !deleteButtonBool;
+      //   $ionicListDelegate.showDelete(deleteButtonBool);
+      // };
 
-      // Function - Toggle reorder buttons
-      var reorderButtonBool = false;
-      $scope.showReorderButtons = function(reorderButtonBool, deleteButtonBool) {
-        if(deleteButtonBool) $scope.showDeleteButtons();
-        reorderButtonBool = !reorderButtonBool;
-        $ionicListDelegate.showReorder(reorderButtonBool);
-      };
+      // // Function - Toggle reorder buttons
+      // var reorderButtonBool = false;
+      // $scope.showReorderButtons = function(reorderButtonBool, deleteButtonBool) {
+      //   if(deleteButtonBool) $scope.showDeleteButtons();
+      //   reorderButtonBool = !reorderButtonBool;
+      //   $ionicListDelegate.showReorder(reorderButtonBool);
+      // };
 
-      // IonicModal - Attach template and add to scope on deferred
-      $ionicModal.fromTemplateUrl('templates/checklist-add.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-      }).then(function(modal) {
-        $scope.modal = modal;
-      });
+      // // IonicModal - Attach template and add to scope on deferred
+      // $ionicModal.fromTemplateUrl('templates/checklist-add.html', {
+      //   scope: $scope,
+      //   animation: 'slide-in-up'
+      // }).then(function(modal) {
+      //   $scope.modal = modal;
+      // });
 
-      // Function - Open Modal
-      $scope.openModal = function(reorderButtonBool, deleteButtonBool) {
-        if(reorderButtonBool) $scope.showReorderButtons();
-        if(deleteButtonBool) $scope.showDeleteButtons();
-        $scope.modal.show();
-      };
+      // // Function - Open Modal
+      // $scope.openModal = function(reorderButtonBool, deleteButtonBool) {
+      //   if(reorderButtonBool) $scope.showReorderButtons();
+      //   if(deleteButtonBool) $scope.showDeleteButtons();
+      //   $scope.modal.show();
+      // };
 
-      // Function - Close Modal
-      $scope.closeModal = function() {
-        $scope.modal.hide();
-      };
+      // // Function - Close Modal
+      // $scope.closeModal = function() {
+      //   $scope.modal.hide();
+      // };
 
-      // Listen - Remove modal box on $destroy event on scope
-      $scope.$on('$destroy', function() {
-        $scope.modal.remove();
-      });
+      // // Listen - Remove modal box on $destroy event on scope
+      // $scope.$on('$destroy', function() {
+      //   $scope.modal.remove();
+      // });
 
-      // Listen - Action on modal hidden
-      $scope.$on('modal.hidden', function() {
-        $scope.item = {};
-      });
+      // // Listen - Action on modal hidden
+      // $scope.$on('modal.hidden', function() {
+      //   $scope.item = {};
+      // });
 
-      // Listen - Action on modal remove
-      $scope.$on('modal.removed', function() {
-        $scope.item = {};
-      });
+      // // Listen - Action on modal remove
+      // $scope.$on('modal.removed', function() {
+      //   $scope.item = {};
+      // });
 
       // Function - Applies a different css class based on the category title
       $scope.applySectionClass = function(category) {
