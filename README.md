@@ -81,3 +81,18 @@ $ ionic emulate android
 // Same as $ ionic emulate ios but using gulp
 $ gulp ion
 ```
+
+What's a good workflow?
+-------------
+
+Ionic offers several utilities out-of-the-box to improve the development process.
+
+Ideally, you will end up having 3 windows open:
+
+
+[gulp-watch](./screenshots/console-gulp-watch.png)
+
+[ionic-serve](./screenshots/console-ionic-serve.png)
+
+[node-server](./screenshots/console-node-server.png)
+
