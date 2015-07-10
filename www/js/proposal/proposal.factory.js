@@ -28,6 +28,17 @@ angular.module('app.ProposalFactory', [])
           })
       }
 
+      // Post an interview request
+      var postInterview = function(data) {
+        return $http.post('http://localhost:8888/api/interview', data)
+          .then(function(res){
+            return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
+          });
+      }
+
     /*
       RETURN
     */
