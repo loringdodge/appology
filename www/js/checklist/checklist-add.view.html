@@ -2,37 +2,29 @@
   <ion-content>
 
     <div class="list padding-horizontal-20">
-      <h5 class="text-grey666 padding-vertical">Schedule an interview and an agent will be in touch with you shortly.</h5>
+      <h5 class="text-grey666 padding-vertical">Add an item to the checklist</h5>
 
       <!-- *************************
         Form Start
       ************************* -->
 
-      <form name="interview">
+      <form name="checklistAdd">
 
         <!-- Date -->
-        <h6>Date</h6>
+        <h6>Title</h6>
         <label class="item item-input-inset border-radius-5">
           <i class="icon ion-calendar placeholder-icon"></i>
-          <input type="date" placeholder="123 Greenfield Dr." ng-model="interview.date" ng-minlength="1" required>
-        </label>
-
-        <!-- Time -->
-        <h6>Time</h6>
-        <label class="item item-input-inset border-radius-5">
-          <i class="icon ion-clock placeholder-icon"></i>
-          <input type="time" placeholder="John Doe" ng-model="interview.time" ng-minlength="1" required>
+          <input type="text" placeholder="ex. Pay Off Home" ng-model="checklistAdd.date" ng-minlength="1" required>
         </label>
 
         <!-- Note -->
-        <h6>Notes</h6>
+        <h6>Description</h6>
         <label class="item item-input-inset border-radius-5">
-<!--           <i class="icon ion-document-text placeholder-icon"></i> -->
-          <textarea rows="10" cols="50" placeholder="Leave a note" ng-model="interview.note"></textarea>
+          <textarea rows="10" cols="50" placeholder="Leave a description" ng-model="checklistAdd.note"></textarea>
         </label>
 
         <!-- Submit Button -->
-        <button class="button button-full button-positive border-radius-5" ng-click="submitInterview(interview)">
+        <button class="button button-full button-positive border-radius-5" ng-click="submitChecklistAdd(checklistAdd)">
           Submit
         </button>
 
