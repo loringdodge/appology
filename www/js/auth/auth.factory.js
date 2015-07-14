@@ -8,7 +8,7 @@ angular.module('app.AuthFactory', [])
 
       // Login user
       var login = function(user) {
-        return $http.post('/login', data)
+        return $http.post('/login', user)
           .then(function(res){
             return res.data;
           }).
@@ -19,7 +19,7 @@ angular.module('app.AuthFactory', [])
 
       // Logout user
       var logout = function() {
-
+        // end session or empty localStorage
       }
 
       // Signup new user

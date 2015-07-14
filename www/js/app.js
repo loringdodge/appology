@@ -46,6 +46,7 @@ angular.module('app', [
   'd3Module',
   'ionic.utils',
   'ionic.contrib.ui.tinderCards',
+  'ngCordova'
 ])
 
 .run(function($ionicPlatform) {

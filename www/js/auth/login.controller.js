@@ -1,9 +1,9 @@
  angular.module('app.LoginController', [])
 
-  .controller('LoginController', function($scope, $ionicModal, $timeout){
+  .controller('LoginController', function($scope, $ionicModal, $timeout, AuthFactory){
 
     // Form data for the login modal
-    $scope.loginData = {};
+    // $scope.loginData = {};
 
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('js/auth/login.view.html', {
@@ -23,14 +23,27 @@
     };
 
     // Perform the login action when the user submits the login form
-    $scope.doLogin = function() {
-      console.log('Doing login', $scope.loginData);
-
-      // Simulate a login delay. Remove this and replace with your login
-      // code if using a login system
-      $timeout(function() {
-        $scope.closeLogin();
-      }, 1000);
+    $scope.submitLogin = function(login) {
+      if(login.$valid) {
+        var data = {
+          username: login.username,
+          password: login.password
+        }
+        AuthFactory.login(data)
+          .then(function(res) {
+            console.log("submitLogin: success", res);
+            $scope.closeLogin();
+          })
+          .catch(function(err) {
+            console.log(err);
+            $scope.closeLogin();
+          });
+      } else {
+        console.log("not valid");
+      }
+      // $timeout(function() {
+      //   $scope.closeLogin();
+      // }, 1000);
     };
 
   });

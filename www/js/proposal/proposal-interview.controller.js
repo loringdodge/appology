@@ -4,7 +4,6 @@ angular.module('app.ProposalInterviewController', [])
 
     // Function - Submit Request
     $scope.submitInterview = function(interview){
-      console.log(interview.$valid);
       if (interview.$valid) {
         var data = {
           id: $stateParams.proposalId,
