@@ -1,30 +1,45 @@
 angular.module('app.LocationDirective', [])
 
-  .directive('header', function(){
-
-    console.log('header started!');
-
-    return {
-      restrict: 'E',
-      template: '<div>HEADER</div>',
-    };
-  })
-
   .directive('locationSuggestion', function($ionicModal, LocationFactory){
 
     var link = function($scope, element){
-      console.log('locationSuggestion started!');
 
       $scope.search = {};
       $scope.search.suggestions = [];
       $scope.search.query = "";
 
-      $ionicModal.fromTemplateUrl('../js/location/location.view.html', {
+      $ionicModal.fromTemplateUrl('js/location/location.view.html', {
         scope: $scope,
-        focusFirstInput: true
+        focusFirstInput: true,
+        animation: 'slide-in-up'
       }).then(function(modal) {
         $scope.modal = modal;
       });
+
+      $scope.open = function() {
+        $scope.modal.show();
+      };
+      $scope.close = function() {
+        $scope.modal.hide();
+      };
+      //Cleanup the modal when we're done with it!
+      $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+      });
+      // Execute action on hide modal
+      $scope.$on('modal.hide', function() {
+        // Execute action
+      });
+      // Execute action on remove modal
+      $scope.$on('modal.removed', function() {
+        // Execute action
+      });
+      $scope.choosePlace = function(place) {
+        LocationFactory.getDetails(place.place_id).then(function(location) {
+          $scope.location = location;
+          $scope.close();
+        });
+      };
 
       element[0].addEventListener('focus', function(event) {
         $scope.open();
@@ -39,19 +54,8 @@ angular.module('app.LocationDirective', [])
             $scope.search.error = "There was an error :( " + status;
           });
         };
-        $scope.open = function() {
-          $scope.modal.show();
-        };
-        $scope.close = function() {
-          $scope.modal.hide();
-        };
-        $scope.choosePlace = function(place) {
-          LocationFactory.getDetails(place.place_id).then(function(location) {
-            $scope.location = location;
-            $scope.close();
-          });
-        };
       });
+
     }
 
     /*

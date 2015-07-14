@@ -6,8 +6,6 @@ angular.module('app.LocationFactory', [])
       HTTP FUNCTIONS
     */
 
-      console.log("LocationFactory started");
-
       var autocompleteService = new google.maps.places.AutocompleteService();
       var detailsService = new google.maps.places.PlacesService(document.createElement("input"));
 
