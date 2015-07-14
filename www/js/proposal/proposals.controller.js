@@ -30,7 +30,14 @@
 
       // Listener - Executes when it detects a card has been removed
       $scope.$on('removeCard', function(event, element, card) {
-        console.log("Got it");
+        ProposalFactory.postDeclineProposal(card.proposal_id)
+          .then(function(data){
+            // do something
+            // remove card permanently
+          })
+          .catch(function(err){
+            console.log(err);
+          })
       });
 
   })

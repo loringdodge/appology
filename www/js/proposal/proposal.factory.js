@@ -39,12 +39,25 @@ angular.module('app.ProposalFactory', [])
           });
       }
 
+      // Post decline of a proposal
+      var postDeclineProposal = function(data) {
+        return $http.post('http://localhost:8888/api/proposal/decline', data)
+          .then(function(res){
+            return res.data;
+          })
+          .catch(function(err){
+            console.log(err);
+          });
+      }
+
     /*
       RETURN
     */
     return {
       getProposals: getProposals,
-      getProposal: getProposal
+      getProposal: getProposal,
+      postInterview: postInterview,
+      postDeclineProposal: postDeclineProposal
     }
 
   });
