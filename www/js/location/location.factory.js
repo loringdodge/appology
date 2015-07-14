@@ -1,6 +1,6 @@
 angular.module('app.LocationFactory', [])
 
-  .factory('LocationFactory', function($http){
+  .factory('LocationFactory', function($http, $q){
 
     /*
       HTTP FUNCTIONS
@@ -41,7 +41,7 @@ angular.module('app.LocationFactory', [])
     */
 
       return {
-        searchAddress: searchAdress,
+        searchAddress: searchAddress,
         getDetails: getDetails
       };
 

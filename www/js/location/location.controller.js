@@ -4,4 +4,5 @@ angular.module('app.LocationController', [])
     console.log("LocationController started");
 
     $scope.location = {};
+
   });
