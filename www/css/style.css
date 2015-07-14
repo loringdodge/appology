@@ -514,6 +514,9 @@ ion-tabs.tabs-color-active-white .tab-item {
     .checklist-section-yellow .checklist-item .item-content .checkbox input:before {
       background-color: #FFF59D; }
 
+.home-bg {
+  height: 100%; }
+
 .splash-top {
   position: relative;
   height: 65%;
