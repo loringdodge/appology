@@ -1,23 +1,15 @@
 <ion-view view-title="Agent Directory">
   <ion-content>
 
-<!--     <div ng-controller="LocationController">
-        <div class="list">
-          <label class="item item-input">
-            <input type="text" placeholder="Location" location-suggestion location="location" ng-model="location.formatted_address">
-          </label>
-        </div>
-    </div> -->
-
     <div class="list" ng-controller="LocationController">
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
           <i class="icon ion-search placeholder-icon"></i>
           <input type="search" placeholder="Zip Code" location-suggestion location="location" ng-model="location.formatted_address">
         </label>
-        <button class="button button-small">
+<!--         <button class="button button-small">
           Submit
-        </button>
+        </button> -->
       </div>
 
       <a class="item item-thumbnail-left agent-item" href="#/tab/agent/{{ agent.agent_id }}" ng-repeat="agent in agents">
