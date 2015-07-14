@@ -453,6 +453,9 @@ ion-tabs.tabs-color-active-white .tab-item {
       border-color: #E57373; }
     .checklist-section-red .checklist-item .item-content .checkbox input:before {
       background-color: #EF9A9A; }
+  .checklist-section-red .button {
+    background-color: #EF9A9A;
+    border: none; }
 
 .checklist-section-blue {
   background-color: #90CAF9; }
@@ -473,6 +476,9 @@ ion-tabs.tabs-color-active-white .tab-item {
       border-color: #42A5F5; }
     .checklist-section-blue .checklist-item .item-content .checkbox input:before {
       background-color: #90CAF9; }
+  .checklist-section-blue .button {
+    background-color: #90CAF9;
+    border: none; }
 
 .checklist-section-green {
   background-color: #A5D6A7 !important; }
@@ -493,6 +499,9 @@ ion-tabs.tabs-color-active-white .tab-item {
       border-color: #66BB6A; }
     .checklist-section-green .checklist-item .item-content .checkbox input:before {
       background-color: #A5D6A7; }
+  .checklist-section-green .button {
+    background-color: #A5D6A7;
+    border: none; }
 
 .checklist-section-yellow {
   background-color: #FFF59D !important; }
@@ -513,6 +522,9 @@ ion-tabs.tabs-color-active-white .tab-item {
       border-color: #FDD835; }
     .checklist-section-yellow .checklist-item .item-content .checkbox input:before {
       background-color: #FFF59D; }
+  .checklist-section-yellow .button {
+    background-color: #FFF59D;
+    border: none; }
 
 .home-bg {
   height: 100%; }

@@ -28,6 +28,12 @@
       background-color: $light-red;
     }
   }
+
+  .button {
+    background-color: $light-red;
+    border: none;
+  }
+
 }
 
 // Blue Checklist
@@ -56,6 +62,11 @@
     .checkbox input:before {
       background-color: $light-blue;
     }
+  }
+
+  .button {
+    background-color: $light-blue;
+    border: none;
   }
 
 }
@@ -89,6 +100,11 @@
     }
   }
 
+  .button {
+    background-color: $light-green;
+    border: none;
+  }
+
 }
 
 // Yellow Checklist
@@ -118,4 +134,10 @@
       background-color: $light-yellow;
     }
   }
+
+  .button {
+    background-color: $light-yellow;
+    border: none;
+  }
+
 }

@@ -1,9 +1,9 @@
 <ion-view view-title="Seller Checklist">
-  <ion-nav-buttons side="right">
+<!--   <ion-nav-buttons side="right">
     <button class="button">
       Add
     </button>
-  </ion-nav-buttons>
+  </ion-nav-buttons> -->
   <ion-content>
 
     <div class="list padding-bottom-5">
@@ -15,7 +15,12 @@
       <ion-list>
         <div ng-repeat="category in checklist" ng-class="applySectionClass(category.category)">
           <!-- Category title -->
-          <ion-item class="item checklist-title">{{ category.category }}</ion-item>
+          <ion-item class="item item-button-right checklist-title">
+            {{ category.category }}
+            <button class="button">
+              <i class="icon ion-plus"></i>
+            </button>
+          </ion-item>
 
           <!-- Checklist items -->
           <ion-item class="item-checkbox-custom item-remove-animate checklist-item" ng-repeat="item in category.list">
