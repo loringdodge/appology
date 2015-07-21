@@ -90,9 +90,16 @@ Ionic offers several utilities out-of-the-box to improve the development process
 Ideally, you will end up having 3 windows open:
 
 
+1. **$ gulp watch** - by executing this command and leaving it in the background, any time you
+make a change to a .scss file, it will automically be transcompiled.
 ![gulp-watch](./screenshots/console-gulp-watch.png)
 
+2. **$ ionic serve** - this will give you a browser view of the mobile app. It will automically be
+reloaded any time you make a change to a .js file or .scss file
 ![ionic-serve](./screenshots/console-ionic-serve.png)
 
+3. **$ node server** - this is a node command that must be executed to test the api routes. Ideally,
+you will have both the /mobile and /server folders as siblings and this should be executed at the
+parent level of both.
 ![node-server](./screenshots/console-node-server.png)
 
