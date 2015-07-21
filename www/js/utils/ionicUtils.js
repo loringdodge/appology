@@ -18,8 +18,17 @@ angular.module('ionic.utils', [])
     isSet: function(key) {
       return typeof $window.localStorage[key] !== "undefined";
     },
-    isObjectEmpty: function(key) {
-      return Object.keys($window.localStorage[key]).length;
+    size: function() {
+      return this.keys().length;
+    },
+    keys: function() {
+      return Object.keys($window.localStorage);
+    },
+    clear: function(key) {
+      delete $window.localStorage[key];
+    },
+    clearAll: function() {
+      $window.localStorage.clear();
     }
   }
 
