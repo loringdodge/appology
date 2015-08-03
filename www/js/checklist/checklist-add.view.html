@@ -8,23 +8,33 @@
         Form Start
       ************************* -->
 
-      <form name="checklistAdd">
+      <form name="checklistAddForm">
 
-        <!-- Date -->
+        <!-- Title -->
         <h6>Title</h6>
-        <label class="item item-input-inset border-radius-5">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.title.$invalid, 'no-errors' : checklistAddForm.title.$valid}">
           <i class="icon ion-calendar placeholder-icon"></i>
-          <input type="text" placeholder="ex. Pay Off Home" ng-model="checklistAdd.name" ng-minlength="1" required>
+          <input type="text" placeholder="ex. Pay Off Home" name="title" ng-model="checklistAdd.title" ng-minlength="1" required>
         </label>
 
-        <!-- Note -->
+          <!-- Title Error -->
+          <div class="error-container" ng-show="checklistAddForm.title.$error" ng-messages="checklistAddForm.title.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
+
+        <!-- Description -->
         <h6>Description</h6>
-        <label class="item item-input-inset border-radius-5">
-          <textarea rows="10" cols="50" placeholder="Leave a description" ng-model="checklistAdd.description"></textarea>
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.description.$invalid, 'no-errors' : checklistAddForm.description.$valid}">
+          <textarea rows="10" cols="50" placeholder="Leave a description" name="description" ng-model="checklistAdd.description" ng-minlength="1" required></textarea>
         </label>
+
+          <!-- Description Error -->
+          <div class="error-container" ng-show="checklistAddForm.description.$error" ng-messages="checklistAddForm.description.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
 
         <!-- Submit Button -->
-        <button class="button button-full button-positive border-radius-5" ng-click="submitChecklistAdd(checklistAdd)">
+        <button class="button button-full button-positive border-radius-5" ng-click="submitChecklistAdd(checklistAddForm)">
           Submit
         </button>
 
