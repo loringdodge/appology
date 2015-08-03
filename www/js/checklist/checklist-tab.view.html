@@ -17,7 +17,7 @@
           <!-- Category title -->
           <ion-item class="item item-button-right checklist-title">
             {{ category.category }}
-            <a ui-sref="tab.checklist-add" class="button">
+            <a ui-sref="tab.checklist-add({ category: category.category })" class="button">
               <i class="icon ion-plus"></i>
             </a>
           </ion-item>

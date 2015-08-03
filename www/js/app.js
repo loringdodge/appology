@@ -24,6 +24,7 @@ angular.module('app', [
   'app.CardController',
   'app.CardsController',
   'app.ChecklistController',
+  'app.ChecklistAddController',
   'app.ChecklistDetailController',
   'app.LocationController',
   'app.ProposalController',
@@ -44,6 +45,7 @@ angular.module('app', [
 
   // Modules
   'd3Module',
+  'ngLodash',
   'ionic.utils',
   'ionic.contrib.ui.tinderCards',
   'ngCordova'
@@ -161,10 +163,11 @@ angular.module('app', [
       })
       // ** Add
       .state('tab.checklist-add', {
-        url: '/checklist/add',
+        url: '/checklist/add/:category',
         views: {
           'tab-checklist': {
-            templateUrl: 'js/checklist/checklist-add.view.html'
+            templateUrl: 'js/checklist/checklist-add.view.html',
+            controller: 'ChecklistAddController'
           }
         }
       })

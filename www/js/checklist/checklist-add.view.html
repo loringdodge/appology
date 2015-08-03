@@ -1,8 +1,8 @@
-<ion-view view-title="Add an entry">
+<ion-view view-title="Add a checklist item">
   <ion-content>
 
     <div class="list padding-horizontal-20">
-      <h5 class="text-grey666 padding-vertical">Add an item to the checklist</h5>
+      <h5 class="text-grey666 padding-vertical">Add something to do for {{ ::category }}</h5>
 
       <!-- *************************
         Form Start
@@ -14,13 +14,13 @@
         <h6>Title</h6>
         <label class="item item-input-inset border-radius-5">
           <i class="icon ion-calendar placeholder-icon"></i>
-          <input type="text" placeholder="ex. Pay Off Home" ng-model="checklistAdd.date" ng-minlength="1" required>
+          <input type="text" placeholder="ex. Pay Off Home" ng-model="checklistAdd.name" ng-minlength="1" required>
         </label>
 
         <!-- Note -->
         <h6>Description</h6>
         <label class="item item-input-inset border-radius-5">
-          <textarea rows="10" cols="50" placeholder="Leave a description" ng-model="checklistAdd.note"></textarea>
+          <textarea rows="10" cols="50" placeholder="Leave a description" ng-model="checklistAdd.description"></textarea>
         </label>
 
         <!-- Submit Button -->
