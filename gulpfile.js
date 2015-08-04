@@ -3,6 +3,8 @@ var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -48,8 +50,16 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('js', function(done) {
-  gulp.src('')
-    .pipe()
+  gulp.src(paths.js)
+    .pipe(sourcemaps.init())
+      .pipe(concat('www/js/app.min.js'))
+      .pipe(ngAnnotate())
+      .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('.'))
+    .on('end', function() {
+      done();
+    });
 })
 
 gulp.task('watch', function() {
