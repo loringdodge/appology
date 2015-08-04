@@ -89,6 +89,7 @@ gulp.task('hint', function() {
     }));
 });
 
+// Built - need to finish this
 gulp.task('build', ['jscs', 'lint'], function() {
   gulp.src('/')
     //pipe through other tasks such as sass or coffee compile tasks
