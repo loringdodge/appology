@@ -5,6 +5,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 var sourcemaps = require('gulp-sourcemaps');
+var notify = require('gulp-notify');
+var jscs = require('gulp-jscs');
+var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -20,6 +23,7 @@ var paths = {
 
 gulp.task('default', ['sass']);
 
+// sass
 gulp.task('sass', function(done) {
   // Compiles and minifies standard ionic css
   gulp.src('./scss/ionic.app.scss')
@@ -49,6 +53,7 @@ gulp.task('sass', function(done) {
     });
 });
 
+// Minify/Concat/Sourmap js
 gulp.task('js', function(done) {
   gulp.src(paths.js)
     .pipe(sourcemaps.init())
@@ -62,6 +67,38 @@ gulp.task('js', function(done) {
     });
 })
 
+// jscs - enforces coding style
+gulp.task('jscs', function() {
+  gulp.src(paths.js)
+    .pipe(jscs())
+    .pipe(notify({
+      title: 'JSCS',
+      message: 'JSCS Passed.'
+    }));
+});
+
+// jshint - enforces syntax rules
+gulp.task('hint', function() {
+  gulp.src(paths.js)
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(jshint.reporter('fail'))
+    .pipe(notify({
+      title: 'JSHint',
+      message: 'JSHint Passed.'
+    }));
+});
+
+gulp.task('build', ['jscs', 'lint'], function() {
+  gulp.src('/')
+    //pipe through other tasks such as sass or coffee compile tasks
+    .pipe(notify({
+        title: 'Task Builder',
+        message: 'Successfully built application'
+    }))
+});
+
+// Watch
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass','js']);
 });
