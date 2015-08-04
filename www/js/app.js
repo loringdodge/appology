@@ -46,6 +46,7 @@ angular.module('app', [
   // Modules
   'd3Module',
   'ngLodash',
+  'ngMessages',
   'ionic.utils',
   'ionic.contrib.ui.tinderCards',
   'ngCordova'

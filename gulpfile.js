@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
@@ -11,13 +12,9 @@ var angularProtractor = require('gulp-angular-protractor');
 
 // Paths to SCSS Files - Used later for watch
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  js: ['./www/js/**/*.js']
 };
-
-// Emulates the ionic app - ios only
-gulp.task('ion', function() {
-  sh.exec('ionic emulate ios');
-});
 
 gulp.task('default', ['sass']);
 
@@ -46,13 +43,17 @@ gulp.task('sass', function(done) {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', function(){
-      // gulp.run('ion');
       done();
     });
 });
 
+gulp.task('js', function(done) {
+  gulp.src('')
+    .pipe()
+})
+
 gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.sass, ['sass','js']);
 });
 
 // Unit testing
@@ -76,6 +77,11 @@ gulp.task('prot', function(done) {
   }))
   .on('error', function(e) { throw e })
   .on('end', done);
+});
+
+// Emulates the ionic app - ios only
+gulp.task('ion', function() {
+  sh.exec('ionic emulate ios');
 });
 
 gulp.task('install', ['git-check'], function() {

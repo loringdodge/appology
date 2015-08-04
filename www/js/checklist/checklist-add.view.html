@@ -12,24 +12,38 @@
 
         <!-- Title -->
         <h6>Title</h6>
-        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.title.$invalid, 'no-errors' : checklistAddForm.title.$valid}">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.title.$invalid && !checklistAddForm.title.$pristine, 'no-errors' : checklistAddForm.title.$valid}">
           <i class="icon ion-calendar placeholder-icon"></i>
-          <input type="text" placeholder="ex. Pay Off Home" name="title" ng-model="checklistAdd.title" ng-minlength="1" required>
+          <input
+            type="text"
+            placeholder="ex. Pay Off Home"
+            name="title"
+            ng-model="checklistAdd.title"
+            ng-minlength="1"
+            required>
         </label>
 
           <!-- Title Error -->
-          <div class="error-container" ng-show="checklistAddForm.title.$error" ng-messages="checklistAddForm.title.$error">
+          <div class="error-container" ng-show="checklistAddForm.title.$error && !checklistAddForm.title.$pristine" ng-messages="checklistAddForm.title.$error">
             <div ng-messages-include="templates/form-validation-error.html"></div>
           </div>
 
         <!-- Description -->
         <h6>Description</h6>
-        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.description.$invalid, 'no-errors' : checklistAddForm.description.$valid}">
-          <textarea rows="10" cols="50" placeholder="Leave a description" name="description" ng-model="checklistAdd.description" ng-minlength="1" required></textarea>
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : checklistAddForm.description.$invalid && !checklistAddForm.description.$pristine , 'no-errors' : checklistAddForm.description.$valid}">
+          <textarea
+            rows="10"
+            cols="50"
+            placeholder="Leave a description"
+            name="description"
+            ng-model="checklistAdd.description"
+            ng-minlength="1"
+            required>
+          </textarea>
         </label>
 
           <!-- Description Error -->
-          <div class="error-container" ng-show="checklistAddForm.description.$error" ng-messages="checklistAddForm.description.$error">
+          <div class="error-container" ng-show="checklistAddForm.description.$error && !checklistAddForm.description.$pristine" ng-messages="checklistAddForm.description.$error">
             <div ng-messages-include="templates/form-validation-error.html"></div>
           </div>
 

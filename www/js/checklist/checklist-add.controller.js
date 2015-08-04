@@ -17,7 +17,6 @@
       $scope.category = $stateParams.category;
 
       $scope.submitChecklistAdd = function(item) {
-        console.log('hello')
         if(item.$valid) {
 
           var data = {
@@ -27,14 +26,13 @@
           var category = lodash.find(checklist, { category: $stateParams.category });
           category.list.push(data);
 
-          console.log(item.title)
+          console.log(data)
 
           // $localStorage.setObject('checklist', checklist);
 
           $ionicHistory.goBack();
 
         } else {
-          console.log(item.title)
           console.log("not valid");
         }
       }
