@@ -28,6 +28,7 @@ angular.module('app', [
   'app.ChecklistDetailController',
   'app.LocationController',
   'app.ProposalController',
+  'app.ProposalFeesController',
   'app.ProposalInterviewController',
   'app.ProposalQuestionsController',
   'app.ProposalsController',
@@ -42,6 +43,9 @@ angular.module('app', [
   'app.ProposalFeesDirective',
   'app.ReviewImgDirective',
   'app.StarDirective',
+
+  // Filters
+  'app.Percentage',
 
   // Modules
   'd3Module',
@@ -189,6 +193,7 @@ angular.module('app', [
       // ** Detail
       .state('tab.proposal', {
         url: '/proposal/:proposalId',
+        params: { proposalId: null },
         views: {
           'tab-proposals': {
             templateUrl: 'js/proposal/proposal.view.html',
@@ -198,7 +203,8 @@ angular.module('app', [
       })
         // *** Fees
         .state('tab.proposal.fees', {
-          url: '/fees',
+          url: '/fees/:proposalId',
+          params: { proposalId: null },
           views: {
             'proposal-view': {
               templateUrl: 'js/proposal/proposal-fees.view.html',
@@ -209,7 +215,8 @@ angular.module('app', [
 
         // *** Service
         .state('tab.proposal.services', {
-          url: '/services',
+          url: '/services/:proposalId',
+          params: { proposalId: null },
           views: {
             'proposal-view': {
               templateUrl: 'js/proposal/proposal-services.view.html',
@@ -220,7 +227,8 @@ angular.module('app', [
 
         // *** Questions
         .state('tab.proposal.questions', {
-          url: '/questions',
+          url: '/questions/:proposalId',
+          params: { proposalId: null },
           views: {
             'proposal-view': {
               templateUrl: 'js/proposal/proposal-questions.view.html',
