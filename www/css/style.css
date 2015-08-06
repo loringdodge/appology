@@ -563,8 +563,20 @@ ion-tabs.tabs-color-active-white .tab-item {
   z-index: 1; }
 
 .splash-top .background {
-  margin: 15% auto 0 auto;
-  width: 80%; }
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  z-index: 0; }
+
+.splash-top .screenshot {
+  position: absolute;
+  top: calc(10% + 80px);
+  left: 15%;
+  width: 70%;
+  border: 3px solid #333;
+  border-radius: 5px;
+  z-index: 1; }
 
 .splash-bottom {
   position: relative;
