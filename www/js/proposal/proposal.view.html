@@ -8,11 +8,11 @@
 
     <div class="button-bar padding">
       <!-- Link - View Fees -->
-      <a class="button button-small button-white button-border-grey button-radius-small-left" ui-sref="tab.proposal.fees">Fees</a>
+      <a class="button button-small button-white button-border-grey button-radius-small-left" ui-sref="tab.proposal.fees({ proposalId: proposal.proposal_id })">Fees</a>
       <!-- Link - View Services -->
-      <a class="button button-small button-white button-border-grey" ui-sref="tab.proposal.services">Services</a>
+      <a class="button button-small button-white button-border-grey" ui-sref="tab.proposal.services({ proposalId: proposal.proposal_id })">Services</a>
       <!-- Link - View Questions -->
-      <a class="button button-small button-white button-border-grey button-radius-small-right" ui-sref="tab.proposal.questions">Questions</a>
+      <a class="button button-small button-white button-border-grey button-radius-small-right" ui-sref="tab.proposal.questions({ proposalId: proposal.proposal_id })">Questions</a>
     </div>
 
     <!-- ui-view -->
