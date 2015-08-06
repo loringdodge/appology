@@ -1,5 +1,5 @@
 <!-- D3 Donut Chart -->
-<proposal-fees-directive></proposal-fees-directive>
+<proposal-fees-directive fees="proposal.fees"></proposal-fees-directive>
 
 <!-- List of Commission Rates -->
 <div class="list">
@@ -7,28 +7,28 @@
   <div class="item">
     Buying Commission
     <span class="item-note">
-      {{ proposal.fees.buying | percentage: 1 }}
+      {{ proposal.fees[0].value | percentage: 1 }}
     </span>
   </div>
 
   <div class="item">
     Listing Commission
     <span class="item-note">
-      {{ proposal.fees.savings | percentage: 1 }}
+      {{ proposal.fees[1].value | percentage: 1 }}
     </span>
   </div>
 
   <div class="item">
     Est. Savings ($8,808)
     <span class="item-note">
-      {{ proposal.fees.savings | percentage: 1 }}
+      {{ proposal.fees[2].value | percentage: 1 }}
     </span>
   </div>
 
   <div class="item">
     Total Commissions ($3,201)
     <span class="item-note">
-      {{ proposal.fees.total | percentage: 1 }}
+      {{ proposal.fees[3].value | percentage: 1 }}
     </span>
   </div>
 

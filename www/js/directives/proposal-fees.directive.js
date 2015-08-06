@@ -1,35 +1,24 @@
 angular.module('app.ProposalFeesDirective', ['ionic', 'd3Module'])
 
-  .directive('proposalFeesDirective', ['$ionicGesture', '$window', 'd3', function($ionicGesture, $window, d3) {
+  .directive('proposalFeesDirective', ['$ionicGesture', '$window', '$timeout', 'd3', function($ionicGesture, $window, $timeout, d3) {
 
     return {
       restrict: 'EA',
-      scope: {},
+      scope: {
+        fees: "="
+      },
       link: function(scope, element, attrs) {
 
-          // Browser onresize event
-          window.onresize = function() {
-            scope.$apply();
-          };
-
-          // hard-code data
-          scope.data = [
-            {label: "Greg", value: 53245},
-            {label: "Ari", value: 28479},
-            {label: 'Q', value: 19697},
-            {label: "Loser", value: 24037}
-          ];
+          $timeout(function(){
+            scope.data = scope.fees;
+          }, 100);
 
           // Watch for resize event
-          scope.$watch(function() {
-            return angular.element($window)[0].innerWidth;
-          }, function() {
+          scope.$watch('data', function() {
             scope.render(scope.data);
           });
 
           scope.render = function(data) {
-            // remove all previous items before render
-            // svg.selectAll('*').remove();
 
             // If we don't pass any data, return out of the element
             if (!data) return;
