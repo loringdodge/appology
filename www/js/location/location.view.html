@@ -1,11 +1,17 @@
 <ion-modal-view>
-  <ion-header-bar class="item-input-inset">
-    <label class="item-input-wrapper">
-      <i class="icon ion-ios7-search placeholder-icon"></i>
-      <input type="search" ng-model="search.query" placeholder="Search">
-    </label>
+  <ion-header-bar>
+    <h1 class="title"></h1>
+    <button class="button button-small button-clear" ng-click="close()">
+      Close
+    </button>
   </ion-header-bar>
   <ion-content>
+    <div class="item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" ng-model="search.query" placeholder="Your Address">
+      </label>
+    </div>
     <ion-list>
       <ion-item ng-show="search.error">
         {{search.error}}
