@@ -197,6 +197,7 @@ angular.module('app', [
     })
       // ** Detail
       .state('tab.proposal', {
+        abstract: true,
         url: '/proposal/:proposalId',
         params: { proposalId: null },
         views: {
@@ -268,6 +269,7 @@ angular.module('app', [
     })
       // ** Profile
       .state('tab.agent', {
+        abstract: true,
         url: '/agent/:agentId',
         views: {
           'tab-agents': {
