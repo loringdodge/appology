@@ -9,6 +9,8 @@
       window.localStorage['didTutorial'] = true;
     };
 
+    window.localStorage['didTutorial'] = false;
+
     // Check if the user already did the tutorial and skip it if so
     if(window.localStorage['didTutorial'] === 'true') {
       $scope.startApp();

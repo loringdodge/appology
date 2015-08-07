@@ -53,11 +53,16 @@ angular.module('app', [
   'ngMessages',
   'ionic.utils',
   'ionic.contrib.ui.tinderCards',
-  'ngCordova'
+  'ngCordova',
+  'ionic.service.core',
+  'ionic.service.analytics'
 ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $ionicAnalytics) {
   $ionicPlatform.ready(function() {
+
+    $ionicAnalytics.register();
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
