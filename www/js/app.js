@@ -61,7 +61,7 @@ angular.module('app', [
 .run(function($ionicPlatform, $ionicAnalytics) {
   $ionicPlatform.ready(function() {
 
-    $ionicAnalytics.register();
+    // $ionicAnalytics.register();
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)

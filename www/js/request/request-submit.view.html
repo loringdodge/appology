@@ -8,38 +8,83 @@
         Form Start
       ************************* -->
 
-      <form name="request">
+      <form name="requestForm">
 
         <!-- Property Address -->
         <h6>Property Address</h6>
-        <label class="item item-input-inset border-radius-5">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : requestForm.address.$invalid && !requestForm.address.$pristine, 'no-errors' : requestForm.address.$valid}">
           <i class="icon ion-ios-location placeholder-icon"></i>
-          <input type="text" placeholder="123 Greenfield Dr." ng-model="request.address" ng-minlength="1" required>
+          <input
+            type="text"
+            placeholder="123 Greenfield Dr."
+            name="address"
+            ng-model="request.address"
+            ng-minlength="1"
+            required>
         </label>
+
+          <!-- Title Error -->
+          <div class="error-container" ng-show="requestForm.address.$error && !requestForm.address.$pristine" ng-messages="requestForm.address.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
 
         <!-- Name -->
         <h6>Name</h6>
-        <label class="item item-input-inset border-radius-5">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : requestForm.name.$invalid && !requestForm.name.$pristine, 'no-errors' : requestForm.name.$valid}">
           <i class="icon ion-person placeholder-icon"></i>
-          <input type="text" placeholder="John Doe" ng-model="request.name" ng-minlength="1" required>
+          <input
+            type="text"
+            placeholder="John Doe"
+            name="name"
+            ng-model="request.name"
+            ng-minlength="1"
+            required>
         </label>
+
+          <!-- Title Error -->
+          <div class="error-container" ng-show="requestForm.name.$error && !requestForm.name.$pristine" ng-messages="requestForm.name.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
 
         <!-- Email -->
         <h6>Email</h6>
-        <label class="item item-input-inset border-radius-5">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : requestForm.email.$invalid && !requestForm.email.$pristine, 'no-errors' : requestForm.email.$valid}">
           <i class="icon ion-email placeholder-icon"></i>
-          <input type="text" type="email" placeholder="johndoe@email.com" ng-model="request.email" ng-minlength="1" required>
+          <input
+            type="email"
+            placeholder="johndoe@email.com"
+            name="email"
+            ng-model="request.email"
+            ng-minlength="1"
+            required>
         </label>
+
+          <!-- Title Error -->
+          <div class="error-container" ng-show="requestForm.email.$error && !requestForm.email.$pristine" ng-messages="requestForm.email.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
 
         <!-- Phone -->
         <h6>Phone</h6>
-        <label class="item item-input-inset border-radius-5">
+        <label class="item item-input-inset border-radius-5" ng-class="{ 'has-errors' : requestForm.phone.$invalid && !requestForm.phone.$pristine, 'no-errors' : requestForm.phone.$valid}">
           <i class="icon ion-ios-telephone placeholder-icon"></i>
-          <input type="text" type="number" placeholder="(555) 555-5555" ng-model="request.phone" ng-minlength="10" ng-maxlength="10" required>
+          <input
+            type="number"
+            placeholder="(555) 555-5555"
+            name="phone"
+            ng-model="request.phone"
+            ng-minlength="10"
+            ng-maxlength="10"
+            required>
         </label>
 
+          <!-- Title Error -->
+          <div class="error-container" ng-show="requestForm.phone.$error && !requestForm.phone.$pristine" ng-messages="requestForm.phone.$error">
+            <div ng-messages-include="templates/form-validation-error.html"></div>
+          </div>
+
         <!-- Submit Button -->
-        <button class="button button-full button-positive border-radius-5" ng-click="submitRequest(request)">
+        <button class="button button-full button-positive border-radius-5" ng-click="submitRequest(requestForm)">
           Submit
         </button>
 

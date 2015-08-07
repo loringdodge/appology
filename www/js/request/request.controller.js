@@ -6,6 +6,13 @@
       SCOPE
     */
 
+      $scope.request = {
+        address: '',
+        name: '',
+        email: '',
+        phone: ''
+      };
+
       // IonicModal - Attach template and add to scope on deferred
       $ionicModal.fromTemplateUrl('templates/request-modal-info.html', {
         scope: $scope,
