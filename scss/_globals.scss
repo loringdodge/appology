@@ -46,10 +46,20 @@
   margin: 0;
 }
 
+.margin-top-none {
+  margin-top: 0px !important;
+}
+
+
 .margin-right {
   margin-right: 10px;
 }
 
 .margin-top {
   margin-top: 10px;
+}
+
+.margin-vertical-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
