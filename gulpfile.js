@@ -101,7 +101,7 @@ gulp.task('build', ['jscs', 'lint'], function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass','js']);
+  gulp.watch(paths.sass, ['sass']);
 });
 
 // Unit testing

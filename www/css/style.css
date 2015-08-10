@@ -115,26 +115,6 @@
   -webkit-border-radius: 0 30px 30px 0 !important;
   border-radius: 0 30px 30px 0 !important; }
 
-.ionic-logo {
-  display: block;
-  margin: 15px auto;
-  width: 96px;
-  height: 96px; }
-
-.pane {
-  /*      background-color: #333;*/ }
-
-.bar.bar-transparent {
-  background-color: transparent;
-  background-image: none;
-  border: none; }
-
-.bar .title {
-  color: #eee; }
-
-.swipe-cards {
-  position: fixed; }
-
 td-cards {
   display: block; }
 
@@ -149,24 +129,6 @@ td-card {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
   border-radius: 6px; }
 
-/*
-td-card.card-0 {
-  -webkit-transform: translate3d(0, 0px, 0);
-  transform: translate3d(0, 0px, 0);
-  top: 0px;
-  z-index: 10;
-}
-td-card.card-1 {
-  -webkit-transform: translate3d(0, 4px, 0);
-  transform: translate3d(0, 4px, 0);
-  z-index: 9;
-}
-td-card.card-2 {
-  -webkit-transform: translate3d(0, 8px, 0);
-  transform: translate3d(0, 8px, 0);
-  z-index: 8;
-}
-*/
 td-card .image {
   position: relative; }
 
@@ -239,6 +201,16 @@ td-card.pop-in-start {
 
 td-card.pop-in {
   -webkit-animation: bounceIn 0.4s ease-out; }
+
+.proposal-below-300 {
+  display: none; }
+
+.proposal-above-300 {
+  display: block; }
+
+@media screen and (max-height: 600px) {
+  td-card:not(#end-card) {
+    height: 315px; } }
 
 .checkbox-red input:before, .checkbox-red .checkbox-icon:before {
   border-color: #F7F7F7; }
