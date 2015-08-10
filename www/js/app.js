@@ -58,13 +58,18 @@ angular.module('app', [
   'ionic.service.analytics'
 ])
 
-.run(function($ionicPlatform, $ionicAnalytics) {
+.run(function($ionicPlatform, $ionicAnalytics, $cordovaDevice) {
   $ionicPlatform.ready(function() {
 
     $ionicAnalytics.register({
       // Used only during development...remove for production
       dryRun: true
     });
+
+    // Get the device's Universally Unique Identifier (UUID). The details of how a UUID is generated
+    // are determined by the device manufacturer and are specific to the device's platform or model.
+    var uuid = $cordovaDevice.getUUID();
+    console.log(uuid);
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
